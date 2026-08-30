@@ -1,8 +1,8 @@
 stressStabilityRank,winTopTwoStabilityRank,averageRankStabilityRank,averageScoreStabilityRank,minimaxStressRegretRank,scoreSpreadStabilityRank,caseKey,caseLabel,averageStressRank,worstStressRank,bestStressRank,stressWins,topTwoStressCount,averageBridgeScore,scoreSpread,maxStressRegret,averageStressRegret
-1,1,1,4,4,5,balanced-winner,Balanced winner,2.250,5,1,5,5,0.593,0.534,0.289,0.077
-2,2,4,1,1,1,robustness-winner,Robustness winner,4.125,6,1,2,2,0.661,0.236,0.015,0.009
-3,3,2,2,2,3,rights-capture-winner,Rights/capture winner,2.625,4,1,1,5,0.660,0.273,0.033,0.011
-4,4,6,6,6,7,efficiency-caution,Efficiency caution case,4.625,7,2,0,3,0.556,0.554,0.314,0.115
-5,5,3,3,3,4,legitimacy-winner,Legitimacy-first winner,3.625,5,2,0,1,0.660,0.273,0.033,0.011
-6,6,5,5,5,6,minimax-regret-winner,Minimax-regret winner,4.125,6,3,0,0,0.570,0.535,0.298,0.101
-7,7,7,7,7,2,current-system-baseline,Current-system-ish baseline,6.625,7,4,0,0,0.379,0.248,0.483,0.291
+1,1,1,4,4,6,balanced-winner,Balanced winner,2.250,5,1,5,5,0.598,0.532,0.302,0.078
+2,2,5,1,1,1,robustness-winner,Robustness winner,4.125,6,1,2,2,0.667,0.221,0.015,0.009
+3,3,2,2,2,3,rights-capture-winner,Rights/capture winner,2.750,4,1,1,4,0.664,0.259,0.035,0.012
+4,4,6,6,6,7,efficiency-caution,Efficiency caution case,4.625,7,2,0,3,0.559,0.556,0.332,0.117
+5,5,3,3,3,4,legitimacy-winner,Legitimacy-first winner,3.750,5,2,0,1,0.664,0.259,0.035,0.012
+6,6,4,5,5,5,minimax-regret-winner,Minimax-regret winner,3.875,6,2,0,1,0.574,0.530,0.309,0.102
+7,7,7,7,7,2,current-system-baseline,Current-system-ish baseline,6.625,7,4,0,0,0.390,0.239,0.469,0.285

@@ -1,4 +1,4 @@
 leftRunKey,rightRunKey,top25Overlap,top100Overlap,sharedCanonicalPortfolioCount,leftPortfolioCount,rightPortfolioCount,comparisonBasis
-current-imported-review,companion-review-first-pass,2,6,2604,33852,27342,canonical portfolio keys; source prefixes stripped for harmonized review rows
-current-imported-review,harmonized-review-source,2,6,33852,33852,61194,canonical portfolio keys; source prefixes stripped for harmonized review rows
-companion-review-first-pass,harmonized-review-source,19,86,27342,27342,61194,canonical portfolio keys; source prefixes stripped for harmonized review rows
+current-imported-review,companion-review-first-pass,2,6,3220,43470,33810,canonical portfolio keys; source prefixes stripped for harmonized review rows
+current-imported-review,harmonized-review-source,2,6,43470,43470,77280,canonical portfolio keys; source prefixes stripped for harmonized review rows
+companion-review-first-pass,harmonized-review-source,19,86,33810,33810,77280,canonical portfolio keys; source prefixes stripped for harmonized review rows

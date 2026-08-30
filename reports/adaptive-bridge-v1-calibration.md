@@ -1,6 +1,6 @@
 # Adaptive Bridge v1 Research Calibration Notes
 
-Generated: `2026-05-12T02:05:54+00:00`
+Generated: `2026-08-30T16:35:23+00:00`
 
 Status: `evidence-informed priors; not empirically fitted`
 

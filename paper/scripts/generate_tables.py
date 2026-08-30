@@ -122,6 +122,22 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def resolve_recorded_path(value: str | Path) -> Path:
+    path = Path(value)
+    return path if path.is_absolute() else (ROOT / path).resolve()
+
+
+def portable_path(path: Path) -> str:
+    absolute = path if path.is_absolute() else (ROOT / path).resolve()
+    try:
+        return str(absolute.relative_to(ROOT))
+    except ValueError:
+        try:
+            return str(Path("..") / absolute.relative_to(SIMULATORS_ROOT))
+        except ValueError:
+            return absolute.name
+
+
 def csv_row_count(path: Path) -> int:
     with path.open(newline="", encoding="utf-8") as handle:
         return sum(1 for _ in csv.DictReader(handle))
@@ -139,7 +155,7 @@ def paper_title(path: Path) -> str:
 
 def artifact_record(path: Path, *, count_rows: bool = False) -> dict[str, object]:
     record: dict[str, object] = {
-        "path": str(path),
+        "path": portable_path(path),
         "exists": path.exists(),
     }
     if not path.exists():
@@ -334,12 +350,12 @@ def source_provenance(inventory: dict) -> tuple[str, dict[str, object]]:
     records = []
     rows = []
     for source in inventory["sources"]:
-        path = Path(source["path"])
+        path = resolve_recorded_path(source["path"])
         digest = sha256(path)
         record = {
             "kind": source["kind"],
             "label": source["label"],
-            "path": str(path),
+            "path": source["path"],
             "rows": source["rows"],
             "scenarioCount": source["scenarioCount"],
             "sha256": digest,

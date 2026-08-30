@@ -1,6 +1,6 @@
 # Review Harmonization Manifest
 
-Generated: `2026-05-12T02:04:25+00:00`
+Generated: `2026-08-30T16:31:21+00:00`
 
 This manifest separates comparable static review fields from source-specific metrics and adaptive candidates. The harmonized source is intentionally conservative: it includes only fields with the same column name, direction, and defensible 0-1 scenario interpretation in both review projects.
 

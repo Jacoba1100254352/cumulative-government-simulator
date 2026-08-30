@@ -43,6 +43,14 @@ def resolved(path: Path) -> Path:
     return path if path.is_absolute() else (ROOT / path).resolve()
 
 
+def portable_path(path: Path) -> str:
+    absolute = resolved(path)
+    try:
+        return str(absolute.relative_to(ROOT))
+    except ValueError:
+        return absolute.name
+
+
 def load_config(path: Path) -> dict[str, Any]:
     if not path.exists():
         raise FileNotFoundError(f"Missing bridge config: {path}")
@@ -664,7 +672,7 @@ def write_baseline_markdown(path: Path, summaries: list[dict[str, object]], peri
 
 Generated: `{generated_at}`
 
-This deterministic bridge model runs `{periods}` periods for a focused set of portfolio cases. It converts static portfolio diagnostics into feedback loops among legislation, review, capture, correction, court-curbing pressure, compliance, and legitimacy. Coefficients and stress modifiers are externalized in `{config_path}`.
+This deterministic bridge model runs `{periods}` periods for a focused set of portfolio cases. It converts static portfolio diagnostics into feedback loops among legislation, review, capture, correction, court-curbing pressure, compliance, and legitimacy. Coefficients and stress modifiers are externalized in `{portable_path(config_path)}`.
 
 ## Baseline Bridge Ranking
 
@@ -956,7 +964,7 @@ def write_sensitivity_markdown(
 
 Generated: `{generated_at}`
 
-This report reruns the same focused bridge cases under every stress profile defined in `{config_path}`. The question is whether the baseline bridge winner remains stable when capture pressure, public trust, rights threat, emergency abuse, institutional noncompliance, administrative overload, or federalism/agency-capacity constraints become worse. It is not a full bridge run over every portfolio.
+This report reruns the same focused bridge cases under every stress profile defined in `{portable_path(config_path)}`. The question is whether the baseline bridge winner remains stable when capture pressure, public trust, rights threat, emergency abuse, institutional noncompliance, administrative overload, or federalism/agency-capacity constraints become worse. It is not a full bridge run over every portfolio.
 
 ## Stress Winners
 
@@ -972,7 +980,7 @@ The table below is sorted by the wins/top-two rule. The criterion-winner table s
 
 {stability_definition_table}
 
-{chr(10).join(sections)}
+{chr(10).join(sections).rstrip()}
 """
     path.write_text(text, encoding="utf-8")
 
@@ -983,7 +991,7 @@ def write_stability_definitions_markdown(path: Path, rows: list[dict[str, object
 
 Generated: `{generated_at}`
 
-These definitions are computed over the focused bridge case set in `{config_path}`. They are alternative summaries of the same stress-profile results, not separate empirical validations.
+These definitions are computed over the focused bridge case set in `{portable_path(config_path)}`. They are alternative summaries of the same stress-profile results, not separate empirical validations.
 
 {markdown_table(
     ["Criterion", "Winner", "Winner Metric", "Interpretation"],
@@ -1010,7 +1018,7 @@ def write_assumptions(
 ) -> None:
     payload = {
         **config,
-        "configPath": str(config_path),
+        "configPath": portable_path(config_path),
         "generatedAt": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "periods": periods,
         "cases": [

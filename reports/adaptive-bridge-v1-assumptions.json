@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-12T02:05:54+00:00",
+  "generatedAt": "2026-08-30T16:35:23+00:00",
   "version": "adaptive-bridge-v1",
   "periods": 36,
   "boundary": "Synthetic all-portfolio adaptive survival screen. It is not a calibrated empirical estimate and should not be treated as proof that any institutional portfolio would work in practice.",
-  "v0StressConfigPath": "/Users/jacobanderson/Documents/simulators/Cumulative Government Simulator/config/interbranch-bridge-v0.json",
-  "v1AdaptiveConfigPath": "/Users/jacobanderson/Documents/simulators/Cumulative Government Simulator/config/adaptive-bridge-v1.json",
+  "v0StressConfigPath": "config/interbranch-bridge-v0.json",
+  "v1AdaptiveConfigPath": "config/adaptive-bridge-v1.json",
   "modeledMechanisms": [
     "transition load from reform complexity, low subsystem floor, uncertainty, and profile regret",
     "sequencing readiness from front-loaded legality, staffing, transparency, and review capacity",

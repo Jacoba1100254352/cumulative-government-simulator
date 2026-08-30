@@ -1,6 +1,6 @@
 criterionKey,criterionLabel,description,rankField,winnerCaseKey,winnerCaseLabel,winnerMetricSummary
 win-top-two,Wins/top-two rule,"Ranks cases by stress-profile wins, then top-two placements, then average stress rank.",winTopTwoStabilityRank,balanced-winner,Balanced winner,5 wins; 5 top-two placements; average rank 2.250
 average-rank,Best average stress rank,"Ranks cases by average rank across stress profiles, regardless of how wins are distributed.",averageRankStabilityRank,balanced-winner,Balanced winner,average rank 2.250; worst rank 5
-average-score,Best average bridge score,Ranks cases by mean bridge score across stress profiles.,averageScoreStabilityRank,robustness-winner,Robustness winner,average bridge score 0.661
+average-score,Best average bridge score,Ranks cases by mean bridge score across stress profiles.,averageScoreStabilityRank,robustness-winner,Robustness winner,average bridge score 0.667
 minimax-stress-regret,Lowest maximum stress regret,Ranks cases by the smallest worst gap from the winning score in any stress profile.,minimaxStressRegretRank,robustness-winner,Robustness winner,max stress regret 0.015; average regret 0.009
-score-spread,Smallest score spread,Ranks cases by the smallest difference between best and worst stress-profile bridge score.,scoreSpreadStabilityRank,robustness-winner,Robustness winner,score spread 0.236
+score-spread,Smallest score spread,Ranks cases by the smallest difference between best and worst stress-profile bridge score.,scoreSpreadStabilityRank,robustness-winner,Robustness winner,score spread 0.221

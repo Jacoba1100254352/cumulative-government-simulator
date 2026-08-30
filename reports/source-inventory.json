@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-05-12T02:04:25+00:00",
+  "generatedAt": "2026-08-30T16:31:21+00:00",
   "sources": [
     {
       "kind": "legislature",
       "label": "Congress Institutional Simulator",
-      "path": "/Users/jacobanderson/Documents/simulators/Congress Institutional Simulator/reports/simulation-campaign-v21-paper.csv",
-      "rows": 1428,
-      "scenarioCount": 42,
+      "path": "../Congress Institutional Simulator/reports/simulation-campaign-v21-paper.csv",
+      "rows": 1702,
+      "scenarioCount": 46,
       "configuredMetricCount": 18,
       "metricColumnsConfigured": [
         "directionalScore",
@@ -32,9 +32,9 @@
     {
       "kind": "review",
       "label": "Supreme Court Simulator Design",
-      "path": "/Users/jacobanderson/Documents/simulators/Supreme Court Simulator Design/reports/constitutional-review-campaign-v2.csv",
-      "rows": 520,
-      "scenarioCount": 26,
+      "path": "../Supreme Court Simulator Design/reports/constitutional-review-campaign-v2.csv",
+      "rows": 540,
+      "scenarioCount": 27,
       "configuredMetricCount": 18,
       "metricColumnsConfigured": [
         "directionalScore",
@@ -60,9 +60,9 @@
     {
       "kind": "anti_capture",
       "label": "Lobby Capture Simulator",
-      "path": "/Users/jacobanderson/Documents/simulators/Lobby Capture Simulator/reports/lobby-capture-campaign.csv",
-      "rows": 31,
-      "scenarioCount": 31,
+      "path": "../Lobby Capture Simulator/reports/lobby-capture-campaign.csv",
+      "rows": 35,
+      "scenarioCount": 35,
       "configuredMetricCount": 21,
       "metricColumnsConfigured": [
         "directionalScore",

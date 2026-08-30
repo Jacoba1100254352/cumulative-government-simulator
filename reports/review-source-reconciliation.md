@@ -1,6 +1,6 @@
 # Review Source Reconciliation
 
-Generated: `2026-05-12T02:04:25+00:00`
+Generated: `2026-08-30T16:31:21+00:00`
 
 This report compares the imported Supreme Court Simulator Design review source with the companion Constitutional Review Simulator source. It is a schema and construct audit, not a claim that the two sources can be merged.
 

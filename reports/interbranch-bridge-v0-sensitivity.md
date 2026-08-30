@@ -1,21 +1,21 @@
 # Interbranch Bridge v0 Sensitivity
 
-Generated: `2026-05-12T02:04:27+00:00`
+Generated: `2026-08-30T16:31:26+00:00`
 
-This report reruns the same focused bridge cases under every stress profile defined in `/Users/jacobanderson/Documents/simulators/Cumulative Government Simulator/config/interbranch-bridge-v0.json`. The question is whether the baseline bridge winner remains stable when capture pressure, public trust, rights threat, emergency abuse, institutional noncompliance, administrative overload, or federalism/agency-capacity constraints become worse. It is not a full bridge run over every portfolio.
+This report reruns the same focused bridge cases under every stress profile defined in `config/interbranch-bridge-v0.json`. The question is whether the baseline bridge winner remains stable when capture pressure, public trust, rights threat, emergency abuse, institutional noncompliance, administrative overload, or federalism/agency-capacity constraints become worse. It is not a full bridge run over every portfolio.
 
 ## Stress Winners
 
 | Stress Profile | Winner | Score | Final Quality | Final Legitimacy | Winner Failure Modes |
 | --- | --- | --- | --- | --- | --- |
-| Administrative Overload and Complexity Stress | Balanced winner | 0.690 | 0.310 | 0.653 | weak starting floor |
-| Baseline | Balanced winner | 0.723 | 0.350 | 0.697 | weak starting floor |
-| Court-Curbing and Institutional Noncompliance Stress | Balanced winner | 0.699 | 0.342 | 0.655 | weak starting floor |
-| Emergency Abuse Stress | Robustness winner | 0.709 | 0.312 | 0.680 | no dominant failure mode |
-| Federalism and Agency-Capacity Stress | Balanced winner | 0.670 | 0.292 | 0.624 | weak starting floor |
-| High Capture Pressure | Robustness winner | 0.479 | 0.003 | 0.420 | low policy quality; public alignment erosion; capture drift; legitimacy erosion |
-| High Rights-Threat Environment | Rights/capture winner | 0.718 | 0.315 | 0.707 | no dominant failure mode |
-| Low Public Trust | Balanced winner | 0.675 | 0.313 | 0.581 | weak starting floor |
+| Administrative Overload and Complexity Stress | Balanced winner | 0.694 | 0.319 | 0.659 | weak starting floor |
+| Baseline | Balanced winner | 0.727 | 0.359 | 0.703 | weak starting floor |
+| Court-Curbing and Institutional Noncompliance Stress | Balanced winner | 0.703 | 0.351 | 0.661 | weak starting floor |
+| Emergency Abuse Stress | Robustness winner | 0.709 | 0.322 | 0.677 | no dominant failure mode |
+| Federalism and Agency-Capacity Stress | Balanced winner | 0.674 | 0.300 | 0.631 | weak starting floor |
+| High Capture Pressure | Robustness winner | 0.498 | 0.025 | 0.440 | low policy quality; public alignment erosion; legitimacy erosion |
+| High Rights-Threat Environment | Rights/capture winner | 0.721 | 0.322 | 0.711 | no dominant failure mode |
+| Low Public Trust | Balanced winner | 0.679 | 0.321 | 0.586 | weak starting floor |
 
 ## Cross-Stress Stability
 
@@ -23,13 +23,13 @@ The table below is sorted by the wins/top-two rule. The criterion-winner table s
 
 | Win/Top-2 Rank | Case | Avg Rank | Worst Rank | Wins | Top-2 Profiles | Avg Score | Max Regret | Score Spread |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | Balanced winner | 2.250 | 5 | 5 | 5 | 0.593 | 0.289 | 0.534 |
-| 2 | Robustness winner | 4.125 | 6 | 2 | 2 | 0.661 | 0.015 | 0.236 |
-| 3 | Rights/capture winner | 2.625 | 4 | 1 | 5 | 0.660 | 0.033 | 0.273 |
-| 4 | Efficiency caution case | 4.625 | 7 | 0 | 3 | 0.556 | 0.314 | 0.554 |
-| 5 | Legitimacy-first winner | 3.625 | 5 | 0 | 1 | 0.660 | 0.033 | 0.273 |
-| 6 | Minimax-regret winner | 4.125 | 6 | 0 | 0 | 0.570 | 0.298 | 0.535 |
-| 7 | Current-system-ish baseline | 6.625 | 7 | 0 | 0 | 0.379 | 0.483 | 0.248 |
+| 1 | Balanced winner | 2.250 | 5 | 5 | 5 | 0.598 | 0.302 | 0.532 |
+| 2 | Robustness winner | 4.125 | 6 | 2 | 2 | 0.667 | 0.015 | 0.221 |
+| 3 | Rights/capture winner | 2.750 | 4 | 1 | 4 | 0.664 | 0.035 | 0.259 |
+| 4 | Efficiency caution case | 4.625 | 7 | 0 | 3 | 0.559 | 0.332 | 0.556 |
+| 5 | Legitimacy-first winner | 3.750 | 5 | 0 | 1 | 0.664 | 0.035 | 0.259 |
+| 6 | Minimax-regret winner | 3.875 | 6 | 0 | 1 | 0.574 | 0.309 | 0.530 |
+| 7 | Current-system-ish baseline | 6.625 | 7 | 0 | 0 | 0.390 | 0.469 | 0.239 |
 
 ## Stability Criterion Winners
 
@@ -37,110 +37,110 @@ The table below is sorted by the wins/top-two rule. The criterion-winner table s
 | --- | --- | --- | --- |
 | Wins/top-two rule | Balanced winner | 5 wins; 5 top-two placements; average rank 2.250 | Ranks cases by stress-profile wins, then top-two placements, then average stress rank. |
 | Best average stress rank | Balanced winner | average rank 2.250; worst rank 5 | Ranks cases by average rank across stress profiles, regardless of how wins are distributed. |
-| Best average bridge score | Robustness winner | average bridge score 0.661 | Ranks cases by mean bridge score across stress profiles. |
+| Best average bridge score | Robustness winner | average bridge score 0.667 | Ranks cases by mean bridge score across stress profiles. |
 | Lowest maximum stress regret | Robustness winner | max stress regret 0.015; average regret 0.009 | Ranks cases by the smallest worst gap from the winning score in any stress profile. |
-| Smallest score spread | Robustness winner | score spread 0.236 | Ranks cases by the smallest difference between best and worst stress-profile bridge score. |
+| Smallest score spread | Robustness winner | score spread 0.221 | Ranks cases by the smallest difference between best and worst stress-profile bridge score. |
 
 ## Administrative Overload and Complexity Stress
 Implementation is harder: effective complexity, delivery, review capacity, and compliance are reduced.
 
 | Rank | Score | Case | Avg Delivery | Final Quality | Final Capture | Final Backlog | Final Legitimacy | Failure Modes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 0.690 | Balanced winner | 0.534 | 0.310 | 0.000 | 0.020 | 0.653 | weak starting floor |
-| 2 | 0.681 | Rights/capture winner | 0.468 | 0.271 | 0.000 | 0.018 | 0.664 | no dominant failure mode |
-| 3 | 0.681 | Legitimacy-first winner | 0.468 | 0.271 | 0.000 | 0.018 | 0.664 | no dominant failure mode |
-| 4 | 0.680 | Minimax-regret winner | 0.523 | 0.296 | 0.000 | 0.018 | 0.626 | weak starting floor |
-| 5 | 0.677 | Robustness winner | 0.457 | 0.264 | 0.000 | 0.018 | 0.657 | no dominant failure mode |
-| 6 | 0.656 | Efficiency caution case | 0.541 | 0.282 | 0.000 | 0.095 | 0.568 | weak starting floor |
-| 7 | 0.410 | Current-system-ish baseline | 0.253 | 0.000 | 0.666 | 0.001 | 0.310 | weak starting floor; low policy quality; public alignment erosion; capture drift; legitimacy erosion; delivery bottleneck |
+| 1 | 0.694 | Balanced winner | 0.544 | 0.319 | 0.000 | 0.020 | 0.659 | weak starting floor |
+| 2 | 0.684 | Minimax-regret winner | 0.531 | 0.303 | 0.000 | 0.018 | 0.633 | no dominant failure mode |
+| 3 | 0.684 | Rights/capture winner | 0.476 | 0.277 | 0.000 | 0.018 | 0.668 | no dominant failure mode |
+| 4 | 0.684 | Legitimacy-first winner | 0.476 | 0.277 | 0.000 | 0.018 | 0.668 | no dominant failure mode |
+| 5 | 0.681 | Robustness winner | 0.468 | 0.272 | 0.000 | 0.018 | 0.662 | no dominant failure mode |
+| 6 | 0.658 | Efficiency caution case | 0.548 | 0.288 | 0.000 | 0.099 | 0.574 | weak starting floor |
+| 7 | 0.417 | Current-system-ish baseline | 0.245 | 0.000 | 0.632 | 0.000 | 0.317 | weak starting floor; low policy quality; public alignment erosion; capture drift; legitimacy erosion; delivery bottleneck |
 
 ## Baseline
 Default bridge coefficients with no additional stress modifiers.
 
 | Rank | Score | Case | Avg Delivery | Final Quality | Final Capture | Final Backlog | Final Legitimacy | Failure Modes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 0.723 | Balanced winner | 0.601 | 0.350 | 0.000 | 0.028 | 0.697 | weak starting floor |
-| 2 | 0.719 | Efficiency caution case | 0.627 | 0.345 | 0.000 | 0.029 | 0.661 | no dominant failure mode |
-| 3 | 0.715 | Minimax-regret winner | 0.595 | 0.337 | 0.000 | 0.027 | 0.675 | no dominant failure mode |
-| 4 | 0.713 | Rights/capture winner | 0.528 | 0.305 | 0.000 | 0.026 | 0.708 | no dominant failure mode |
-| 5 | 0.713 | Legitimacy-first winner | 0.528 | 0.305 | 0.000 | 0.026 | 0.708 | no dominant failure mode |
-| 6 | 0.709 | Robustness winner | 0.516 | 0.298 | 0.000 | 0.025 | 0.700 | no dominant failure mode |
-| 7 | 0.474 | Current-system-ish baseline | 0.297 | 0.000 | 0.479 | 0.000 | 0.391 | weak starting floor; low policy quality; public alignment erosion; legitimacy erosion; delivery bottleneck |
+| 1 | 0.727 | Balanced winner | 0.612 | 0.359 | 0.000 | 0.029 | 0.703 | weak starting floor |
+| 2 | 0.722 | Efficiency caution case | 0.634 | 0.352 | 0.000 | 0.030 | 0.666 | no dominant failure mode |
+| 3 | 0.719 | Minimax-regret winner | 0.602 | 0.344 | 0.000 | 0.027 | 0.681 | no dominant failure mode |
+| 4 | 0.716 | Rights/capture winner | 0.537 | 0.312 | 0.000 | 0.026 | 0.712 | no dominant failure mode |
+| 5 | 0.716 | Legitimacy-first winner | 0.537 | 0.312 | 0.000 | 0.026 | 0.712 | no dominant failure mode |
+| 6 | 0.713 | Robustness winner | 0.528 | 0.307 | 0.000 | 0.025 | 0.705 | no dominant failure mode |
+| 7 | 0.480 | Current-system-ish baseline | 0.288 | 0.000 | 0.449 | 0.000 | 0.396 | weak starting floor; low policy quality; public alignment erosion; legitimacy erosion; delivery bottleneck |
 
 ## Court-Curbing and Institutional Noncompliance Stress
 Corrective review creates more retaliation pressure, institutional compliance falls, and court-curbing pressure decays slowly.
 
 | Rank | Score | Case | Avg Delivery | Final Quality | Final Capture | Final Backlog | Final Legitimacy | Failure Modes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 0.699 | Balanced winner | 0.593 | 0.342 | 0.000 | 0.028 | 0.655 | weak starting floor |
-| 2 | 0.694 | Efficiency caution case | 0.617 | 0.336 | 0.000 | 0.029 | 0.618 | no dominant failure mode |
-| 3 | 0.692 | Minimax-regret winner | 0.586 | 0.329 | 0.000 | 0.027 | 0.633 | no dominant failure mode |
-| 4 | 0.688 | Rights/capture winner | 0.521 | 0.298 | 0.000 | 0.025 | 0.664 | no dominant failure mode |
-| 5 | 0.688 | Legitimacy-first winner | 0.521 | 0.298 | 0.000 | 0.025 | 0.664 | no dominant failure mode |
-| 6 | 0.684 | Robustness winner | 0.509 | 0.291 | 0.000 | 0.025 | 0.657 | no dominant failure mode |
-| 7 | 0.450 | Current-system-ish baseline | 0.292 | 0.000 | 0.499 | 0.000 | 0.350 | weak starting floor; low policy quality; public alignment erosion; legitimacy erosion; delivery bottleneck |
+| 1 | 0.703 | Balanced winner | 0.603 | 0.351 | 0.000 | 0.028 | 0.661 | weak starting floor |
+| 2 | 0.697 | Efficiency caution case | 0.624 | 0.342 | 0.000 | 0.029 | 0.622 | no dominant failure mode |
+| 3 | 0.695 | Minimax-regret winner | 0.593 | 0.336 | 0.000 | 0.027 | 0.639 | no dominant failure mode |
+| 4 | 0.691 | Rights/capture winner | 0.529 | 0.305 | 0.000 | 0.025 | 0.668 | no dominant failure mode |
+| 5 | 0.691 | Legitimacy-first winner | 0.529 | 0.305 | 0.000 | 0.025 | 0.668 | no dominant failure mode |
+| 6 | 0.688 | Robustness winner | 0.521 | 0.300 | 0.000 | 0.025 | 0.662 | no dominant failure mode |
+| 7 | 0.456 | Current-system-ish baseline | 0.283 | 0.000 | 0.469 | 0.000 | 0.354 | weak starting floor; low policy quality; public alignment erosion; legitimacy erosion; delivery bottleneck |
 
 ## Emergency Abuse Stress
 Emergency action and emergency litigation generate more rights-threatening policy, larger review dockets, and stronger legitimacy penalties when review cannot keep up.
 
 | Rank | Score | Case | Avg Delivery | Final Quality | Final Capture | Final Backlog | Final Legitimacy | Failure Modes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 0.709 | Robustness winner | 0.506 | 0.312 | 0.000 | 0.003 | 0.680 | no dominant failure mode |
-| 2 | 0.705 | Rights/capture winner | 0.516 | 0.319 | 0.000 | 0.030 | 0.672 | no dominant failure mode |
-| 3 | 0.705 | Legitimacy-first winner | 0.516 | 0.319 | 0.000 | 0.030 | 0.672 | no dominant failure mode |
-| 4 | 0.492 | Balanced winner | 0.556 | 0.252 | 0.000 | 1.000 | 0.400 | weak starting floor; public alignment erosion; uncorrected rights backlog; legitimacy erosion |
-| 5 | 0.467 | Minimax-regret winner | 0.541 | 0.208 | 0.000 | 1.000 | 0.337 | low policy quality; public alignment erosion; uncorrected rights backlog; legitimacy erosion |
-| 6 | 0.443 | Efficiency caution case | 0.557 | 0.162 | 0.000 | 1.000 | 0.264 | low policy quality; public alignment erosion; uncorrected rights backlog; legitimacy erosion |
-| 7 | 0.227 | Current-system-ish baseline | 0.272 | 0.000 | 0.642 | 1.000 | 0.063 | weak starting floor; low policy quality; public alignment erosion; capture drift; uncorrected rights backlog; legitimacy erosion; delivery bottleneck |
+| 1 | 0.709 | Robustness winner | 0.517 | 0.322 | 0.000 | 0.015 | 0.677 | no dominant failure mode |
+| 2 | 0.700 | Rights/capture winner | 0.523 | 0.324 | 0.000 | 0.070 | 0.667 | no dominant failure mode |
+| 3 | 0.700 | Legitimacy-first winner | 0.523 | 0.324 | 0.000 | 0.070 | 0.667 | no dominant failure mode |
+| 4 | 0.495 | Balanced winner | 0.566 | 0.258 | 0.000 | 1.000 | 0.405 | weak starting floor; public alignment erosion; uncorrected rights backlog; legitimacy erosion |
+| 5 | 0.471 | Minimax-regret winner | 0.549 | 0.215 | 0.000 | 1.000 | 0.344 | low policy quality; public alignment erosion; uncorrected rights backlog; legitimacy erosion |
+| 6 | 0.447 | Efficiency caution case | 0.565 | 0.170 | 0.000 | 1.000 | 0.272 | low policy quality; public alignment erosion; uncorrected rights backlog; legitimacy erosion |
+| 7 | 0.240 | Current-system-ish baseline | 0.265 | 0.000 | 0.593 | 1.000 | 0.086 | weak starting floor; low policy quality; public alignment erosion; capture drift; uncorrected rights backlog; legitimacy erosion; delivery bottleneck |
 
 ## Federalism and Agency-Capacity Stress
 Subnational resistance, agency undercapacity, procurement friction, and implementation bottlenecks weaken delivery, compliance, and correction capacity.
 
 | Rank | Score | Case | Avg Delivery | Final Quality | Final Capture | Final Backlog | Final Legitimacy | Failure Modes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 0.670 | Balanced winner | 0.504 | 0.292 | 0.000 | 0.017 | 0.624 | weak starting floor |
-| 2 | 0.661 | Rights/capture winner | 0.442 | 0.255 | 0.000 | 0.015 | 0.636 | no dominant failure mode |
-| 3 | 0.661 | Legitimacy-first winner | 0.442 | 0.255 | 0.000 | 0.015 | 0.636 | no dominant failure mode |
-| 4 | 0.660 | Minimax-regret winner | 0.493 | 0.278 | 0.000 | 0.015 | 0.597 | weak starting floor |
-| 5 | 0.657 | Robustness winner | 0.431 | 0.249 | 0.000 | 0.015 | 0.629 | low policy quality |
-| 6 | 0.617 | Efficiency caution case | 0.505 | 0.248 | 0.000 | 0.153 | 0.511 | weak starting floor; low policy quality |
-| 7 | 0.377 | Current-system-ish baseline | 0.235 | 0.000 | 0.738 | 0.022 | 0.267 | weak starting floor; low policy quality; public alignment erosion; capture drift; legitimacy erosion; delivery bottleneck |
+| 1 | 0.674 | Balanced winner | 0.513 | 0.300 | 0.000 | 0.017 | 0.631 | weak starting floor |
+| 2 | 0.664 | Rights/capture winner | 0.449 | 0.261 | 0.000 | 0.015 | 0.640 | no dominant failure mode |
+| 3 | 0.664 | Legitimacy-first winner | 0.449 | 0.261 | 0.000 | 0.015 | 0.640 | no dominant failure mode |
+| 4 | 0.664 | Minimax-regret winner | 0.500 | 0.285 | 0.000 | 0.015 | 0.604 | weak starting floor |
+| 5 | 0.661 | Robustness winner | 0.442 | 0.257 | 0.000 | 0.015 | 0.633 | no dominant failure mode |
+| 6 | 0.622 | Efficiency caution case | 0.511 | 0.256 | 0.000 | 0.149 | 0.520 | weak starting floor |
+| 7 | 0.387 | Current-system-ish baseline | 0.228 | 0.000 | 0.704 | 0.001 | 0.276 | weak starting floor; low policy quality; public alignment erosion; capture drift; legitimacy erosion; delivery bottleneck |
 
 ## High Capture Pressure
 Organized interests adapt more aggressively, capture pressure starts higher, and capture controls are less effective.
 
 | Rank | Score | Case | Avg Delivery | Final Quality | Final Capture | Final Backlog | Final Legitimacy | Failure Modes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 0.479 | Robustness winner | 0.462 | 0.003 | 0.573 | 0.006 | 0.420 | low policy quality; public alignment erosion; capture drift; legitimacy erosion |
-| 2 | 0.446 | Rights/capture winner | 0.470 | 0.000 | 0.661 | 0.083 | 0.389 | low policy quality; public alignment erosion; capture drift; legitimacy erosion |
-| 3 | 0.446 | Legitimacy-first winner | 0.470 | 0.000 | 0.661 | 0.083 | 0.389 | low policy quality; public alignment erosion; capture drift; legitimacy erosion |
-| 4 | 0.304 | Current-system-ish baseline | 0.253 | 0.000 | 1.000 | 0.120 | 0.129 | weak starting floor; low policy quality; public alignment erosion; capture drift; legitimacy erosion; delivery bottleneck |
-| 5 | 0.189 | Balanced winner | 0.502 | 0.000 | 1.000 | 1.000 | 0.095 | weak starting floor; low policy quality; public alignment erosion; capture drift; uncorrected rights backlog; legitimacy erosion |
-| 6 | 0.180 | Minimax-regret winner | 0.494 | 0.000 | 1.000 | 1.000 | 0.059 | low policy quality; public alignment erosion; capture drift; uncorrected rights backlog; legitimacy erosion |
-| 7 | 0.165 | Efficiency caution case | 0.505 | 0.000 | 1.000 | 1.000 | 0.000 | low policy quality; public alignment erosion; capture drift; uncorrected rights backlog; legitimacy erosion |
+| 1 | 0.498 | Robustness winner | 0.476 | 0.025 | 0.529 | 0.000 | 0.440 | low policy quality; public alignment erosion; legitimacy erosion |
+| 2 | 0.463 | Rights/capture winner | 0.480 | 0.000 | 0.615 | 0.058 | 0.410 | low policy quality; public alignment erosion; capture drift; legitimacy erosion |
+| 3 | 0.463 | Legitimacy-first winner | 0.480 | 0.000 | 0.615 | 0.058 | 0.410 | low policy quality; public alignment erosion; capture drift; legitimacy erosion |
+| 4 | 0.308 | Current-system-ish baseline | 0.244 | 0.000 | 1.000 | 0.083 | 0.132 | weak starting floor; low policy quality; public alignment erosion; capture drift; legitimacy erosion; delivery bottleneck |
+| 5 | 0.196 | Balanced winner | 0.515 | 0.000 | 1.000 | 1.000 | 0.114 | weak starting floor; low policy quality; public alignment erosion; capture drift; uncorrected rights backlog; legitimacy erosion |
+| 6 | 0.189 | Minimax-regret winner | 0.505 | 0.000 | 1.000 | 1.000 | 0.087 | low policy quality; public alignment erosion; capture drift; uncorrected rights backlog; legitimacy erosion |
+| 7 | 0.166 | Efficiency caution case | 0.512 | 0.000 | 1.000 | 1.000 | 0.000 | low policy quality; public alignment erosion; capture drift; uncorrected rights backlog; legitimacy erosion |
 
 ## High Rights-Threat Environment
 Bad-policy inflow is more likely to create rights-threatening review pressure.
 
 | Rank | Score | Case | Avg Delivery | Final Quality | Final Capture | Final Backlog | Final Legitimacy | Failure Modes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 0.718 | Rights/capture winner | 0.526 | 0.315 | 0.000 | 0.000 | 0.707 | no dominant failure mode |
-| 2 | 0.718 | Legitimacy-first winner | 0.526 | 0.315 | 0.000 | 0.000 | 0.707 | no dominant failure mode |
-| 3 | 0.714 | Robustness winner | 0.514 | 0.307 | 0.000 | 0.000 | 0.701 | no dominant failure mode |
-| 4 | 0.609 | Balanced winner | 0.580 | 0.301 | 0.000 | 0.539 | 0.570 | weak starting floor |
-| 5 | 0.495 | Minimax-regret winner | 0.559 | 0.225 | 0.000 | 1.000 | 0.435 | low policy quality; public alignment erosion; uncorrected rights backlog; legitimacy erosion |
-| 6 | 0.480 | Efficiency caution case | 0.581 | 0.195 | 0.000 | 1.000 | 0.384 | low policy quality; public alignment erosion; uncorrected rights backlog; legitimacy erosion |
-| 7 | 0.365 | Current-system-ish baseline | 0.289 | 0.000 | 0.491 | 0.573 | 0.279 | weak starting floor; low policy quality; public alignment erosion; uncorrected rights backlog; legitimacy erosion; delivery bottleneck |
+| 1 | 0.721 | Rights/capture winner | 0.534 | 0.322 | 0.000 | 0.000 | 0.711 | no dominant failure mode |
+| 2 | 0.721 | Legitimacy-first winner | 0.534 | 0.322 | 0.000 | 0.000 | 0.711 | no dominant failure mode |
+| 3 | 0.718 | Robustness winner | 0.526 | 0.317 | 0.000 | 0.000 | 0.705 | no dominant failure mode |
+| 4 | 0.611 | Balanced winner | 0.590 | 0.308 | 0.000 | 0.551 | 0.576 | weak starting floor; uncorrected rights backlog |
+| 5 | 0.500 | Minimax-regret winner | 0.567 | 0.233 | 0.000 | 1.000 | 0.443 | low policy quality; public alignment erosion; uncorrected rights backlog; legitimacy erosion |
+| 6 | 0.483 | Efficiency caution case | 0.588 | 0.199 | 0.000 | 1.000 | 0.388 | low policy quality; public alignment erosion; uncorrected rights backlog; legitimacy erosion |
+| 7 | 0.405 | Current-system-ish baseline | 0.282 | 0.000 | 0.438 | 0.408 | 0.314 | weak starting floor; low policy quality; public alignment erosion; legitimacy erosion; delivery bottleneck |
 
 ## Low Public Trust
 Legitimacy and compliance start lower, and public-alignment losses have stronger legitimacy effects.
 
 | Rank | Score | Case | Avg Delivery | Final Quality | Final Capture | Final Backlog | Final Legitimacy | Failure Modes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 0.675 | Balanced winner | 0.550 | 0.313 | 0.000 | 0.026 | 0.581 | weak starting floor |
-| 2 | 0.672 | Efficiency caution case | 0.574 | 0.308 | 0.000 | 0.027 | 0.549 | no dominant failure mode |
-| 3 | 0.669 | Minimax-regret winner | 0.545 | 0.302 | 0.000 | 0.025 | 0.564 | no dominant failure mode |
-| 4 | 0.666 | Rights/capture winner | 0.483 | 0.273 | 0.000 | 0.024 | 0.590 | no dominant failure mode |
-| 5 | 0.666 | Legitimacy-first winner | 0.483 | 0.273 | 0.000 | 0.024 | 0.590 | no dominant failure mode |
-| 6 | 0.663 | Robustness winner | 0.472 | 0.267 | 0.000 | 0.023 | 0.585 | no dominant failure mode |
-| 7 | 0.426 | Current-system-ish baseline | 0.268 | 0.000 | 0.533 | 0.000 | 0.264 | weak starting floor; low policy quality; public alignment erosion; legitimacy erosion; delivery bottleneck |
+| 1 | 0.679 | Balanced winner | 0.560 | 0.321 | 0.000 | 0.026 | 0.586 | weak starting floor |
+| 2 | 0.674 | Efficiency caution case | 0.580 | 0.314 | 0.000 | 0.027 | 0.554 | no dominant failure mode |
+| 3 | 0.673 | Minimax-regret winner | 0.552 | 0.308 | 0.000 | 0.025 | 0.569 | no dominant failure mode |
+| 4 | 0.669 | Rights/capture winner | 0.491 | 0.280 | 0.000 | 0.024 | 0.594 | no dominant failure mode |
+| 5 | 0.669 | Legitimacy-first winner | 0.491 | 0.280 | 0.000 | 0.024 | 0.594 | no dominant failure mode |
+| 6 | 0.666 | Robustness winner | 0.484 | 0.275 | 0.000 | 0.023 | 0.589 | no dominant failure mode |
+| 7 | 0.431 | Current-system-ish baseline | 0.260 | 0.000 | 0.505 | 0.000 | 0.269 | weak starting floor; low policy quality; public alignment erosion; legitimacy erosion; delivery bottleneck |

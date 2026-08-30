@@ -361,6 +361,17 @@ def resolved(path: Path) -> Path:
     return path if path.is_absolute() else (ROOT / path).resolve()
 
 
+def portable_path(path: Path) -> str:
+    absolute = resolved(path)
+    try:
+        return str(absolute.relative_to(ROOT))
+    except ValueError:
+        try:
+            return str(Path("..") / absolute.relative_to(SIMULATORS))
+        except ValueError:
+            return absolute.name
+
+
 def apply_overrides(sources: list[SourceConfig], args: argparse.Namespace) -> list[SourceConfig]:
     overrides = {
         "legislature": args.congress_csv,
@@ -505,7 +516,7 @@ def aggregate_source(source: SourceConfig) -> tuple[list[dict[str, object]], dic
             {
                 "kind": source.kind,
                 "source": source.label,
-                "sourcePath": str(source.path),
+                "sourcePath": portable_path(source.path),
                 "scenarioKey": key,
                 "scenarioName": first.get(source.name_column, key).strip().strip('"') or key,
                 "score": score,
@@ -521,7 +532,7 @@ def aggregate_source(source: SourceConfig) -> tuple[list[dict[str, object]], dic
     inventory = {
         "kind": source.kind,
         "label": source.label,
-        "path": str(source.path),
+        "path": portable_path(source.path),
         "rows": len(rows),
         "scenarioCount": len(options),
         "configuredMetricCount": len(source.metrics),
@@ -1550,7 +1561,7 @@ This report compares the headline portfolio families profile by profile. It is i
     table_rows,
 )}
 
-{chr(10).join(profile_sections)}
+{chr(10).join(profile_sections).rstrip()}
 """
     path.write_text(text, encoding="utf-8")
 
@@ -1876,7 +1887,7 @@ This report reranks every institutional portfolio under alternative normative pr
 
 {markdown_table(["Profile", "Score", "Balanced Rank", "Legislature", "Review", "Anti-capture"], profile_winner_rows(portfolios))}
 
-{chr(10).join(profile_sections)}
+{chr(10).join(profile_sections).rstrip()}
 """
     path.write_text(text, encoding="utf-8")
 
@@ -2632,7 +2643,7 @@ def write_harmonized_review_source_csv(
         "scenarioCount": len({row["scenarioKey"] for row in rows_out}),
         "configuredMetricCount": len(HARMONIZED_REVIEW_METRICS),
         "metricColumnsConfigured": [metric.column for metric in HARMONIZED_REVIEW_METRICS],
-        "path": str(path),
+        "path": portable_path(path),
     }
 
 
@@ -2751,7 +2762,7 @@ def dual_review_sensitivity_rows(
                 "runKey": run_key,
                 "status": "completed",
                 "reviewSource": source.label,
-                "reviewPath": str(source.path),
+                "reviewPath": portable_path(source.path),
                 "reviewRows": inventory["rows"],
                 "reviewScenarios": inventory["scenarioCount"],
                 "portfolioCount": len(portfolios),

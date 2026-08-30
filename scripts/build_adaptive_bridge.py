@@ -332,6 +332,14 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def portable_path(path: Path) -> str:
+    absolute = path if path.is_absolute() else (ROOT / path).resolve()
+    try:
+        return str(absolute.relative_to(ROOT))
+    except ValueError:
+        return absolute.name
+
+
 def read_csv(path: Path) -> list[dict[str, str]]:
     if not path.exists():
         raise FileNotFoundError(f"Missing required report: {path}")
@@ -1414,9 +1422,9 @@ This synthetic bridge runs `{periods}` periods for every static portfolio under 
 
 Calibration status: `{research.get("status", "synthetic; not empirically fitted")}`
 
-V0 stress config: `{v0_config_path}`
+V0 stress config: `{portable_path(v0_config_path)}`
 
-V1 adaptive config: `{v1_config_path}`
+V1 adaptive config: `{portable_path(v1_config_path)}`
 
 ## Gate counts
 
@@ -1625,8 +1633,8 @@ def write_assumptions(
         "version": v1_config["version"],
         "periods": periods,
         "boundary": v1_config["boundary"],
-        "v0StressConfigPath": str(v0_config_path),
-        "v1AdaptiveConfigPath": str(v1_config_path),
+        "v0StressConfigPath": portable_path(v0_config_path),
+        "v1AdaptiveConfigPath": portable_path(v1_config_path),
         "modeledMechanisms": v1_config["modeledMechanisms"],
         "stateVariables": v1_config["stateVariables"],
         "scoreWeights": v1_config["scoreWeights"],

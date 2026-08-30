@@ -48,6 +48,11 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
+def resolve_recorded_path(value: str | Path) -> Path:
+    path = Path(value)
+    return path if path.is_absolute() else (ROOT / path).resolve()
+
+
 def require_exists(path: Path, label: str) -> None:
     if not path.exists():
         raise SystemExit(f"Missing {label}: {path}")
@@ -68,7 +73,7 @@ def collect_source_artifacts(inventory_path: Path) -> list[Path]:
     if not inventory_path.exists():
         return []
     inventory = json.loads(inventory_path.read_text(encoding="utf-8"))
-    return sorted(Path(source["path"]) for source in inventory.get("sources", []))
+    return sorted(resolve_recorded_path(source["path"]) for source in inventory.get("sources", []))
 
 
 def require_pdf_newer_than(pdf: Path, dependencies: list[Path]) -> None:
@@ -100,7 +105,7 @@ def require_source_hashes_current(provenance_path: Path) -> None:
     provenance = json.loads(provenance_path.read_text(encoding="utf-8"))
     mismatches = []
     for source in provenance.get("sources", []):
-        path = Path(source["path"])
+        path = resolve_recorded_path(source["path"])
         require_exists(path, f"source artifact for {source.get('label', source.get('kind', 'unknown'))}")
         current = sha256(path)
         expected = source.get("sha256")
@@ -127,7 +132,7 @@ def require_crosswalk_hashes_current(crosswalk_path: Path) -> None:
             path_text = artifact.get("path")
             if not path_text:
                 continue
-            path = Path(path_text)
+            path = resolve_recorded_path(path_text)
             if artifact.get("exists") is False:
                 if path.exists():
                     mismatches.append((path, project, artifact_kind, "missing", sha256(path)))

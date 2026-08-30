@@ -1,6 +1,6 @@
 # Speculative Modeling Agenda
 
-Generated: `2026-05-12T02:04:25+00:00`
+Generated: `2026-08-30T16:31:21+00:00`
 
 These directions are not current findings. They are systems or mechanisms the cumulative simulator should test before the paper makes stronger recommendations.
 

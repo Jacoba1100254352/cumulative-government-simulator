@@ -266,8 +266,8 @@
       }
     }
   },
-  "configPath": "/Users/jacobanderson/Documents/simulators/Cumulative Government Simulator/config/interbranch-bridge-v0.json",
-  "generatedAt": "2026-05-12T02:04:27+00:00",
+  "configPath": "config/interbranch-bridge-v0.json",
+  "generatedAt": "2026-08-30T16:31:26+00:00",
   "periods": 24,
   "cases": [
     {

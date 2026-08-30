@@ -1,6 +1,6 @@
 # Adaptive Bridge v1 Coefficient Families
 
-Generated: `2026-05-12T02:05:54+00:00`
+Generated: `2026-08-30T16:35:23+00:00`
 
 These are mechanism-family coefficients loaded by `scripts/build_adaptive_bridge.py` from the v1 configuration. They are evidence-anchored priors, not fitted estimates.
 
