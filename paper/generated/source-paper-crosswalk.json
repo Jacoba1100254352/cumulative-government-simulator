@@ -1,0 +1,104 @@
+{
+  "sources": [
+    {
+      "project": "Congress Institutional Simulator",
+      "title": "Searching Legislative Design Space for Compromise and Productivity",
+      "paper": {
+        "path": "/Users/jacobanderson/Documents/simulators/Congress Institutional Simulator/paper/main.tex",
+        "exists": true,
+        "modified": "2026-05-09T23:14:46",
+        "sha256": "2791c54c98b58214be3a3cfb01ff135ec7110e8abea51a7173ad942b477cf29d"
+      },
+      "pdf": {
+        "path": "/Users/jacobanderson/Documents/simulators/Congress Institutional Simulator/paper/main.pdf",
+        "exists": true,
+        "modified": "2026-05-09T23:32:12",
+        "sha256": "af349e850dac5988892d933d668a39dcdbc997666b975fdbbbb27c28e73e530e"
+      },
+      "report": {
+        "path": "/Users/jacobanderson/Documents/simulators/Congress Institutional Simulator/reports/simulation-campaign-v21-paper.csv",
+        "exists": true,
+        "modified": "2026-05-09T23:23:01",
+        "sha256": "1e36005c54d3a0ccf1b61904735a144dbd01e9afb600b17e7e6457a6124f0b35",
+        "rows": 1428
+      },
+      "cumulativeUse": "Imported legislative source.",
+      "readingRule": "Treat the updated portfolio-hybrid legislature as a synthesized candidate; pairwise alternatives remain the cleaner non-default productivity and compromise comparator."
+    },
+    {
+      "project": "Supreme Court Simulator Design",
+      "title": "Designing Constitutional Review Institutions by Simulation",
+      "paper": {
+        "path": "/Users/jacobanderson/Documents/simulators/Supreme Court Simulator Design/paper/main.tex",
+        "exists": true,
+        "modified": "2026-05-09T13:59:40",
+        "sha256": "eef2eeba51e15a78da937baa009eefac160c9c178b008d8dfe5a6be8fe01b40b"
+      },
+      "pdf": {
+        "path": "/Users/jacobanderson/Documents/simulators/Supreme Court Simulator Design/paper/main.pdf",
+        "exists": true,
+        "modified": "2026-05-09T21:18:37",
+        "sha256": "b70f6d26cbe8bf117d540a8d370412ec68abddbe9150f6c1c9d945a95b41dfe7"
+      },
+      "report": {
+        "path": "/Users/jacobanderson/Documents/simulators/Supreme Court Simulator Design/reports/constitutional-review-campaign-v2.csv",
+        "exists": true,
+        "modified": "2026-05-08T22:31:46",
+        "sha256": "2278a169405c38ecb2a80ca855d8d683d58f8ecbe00bf8ee124daeda8486dae3",
+        "rows": 520
+      },
+      "cumulativeUse": "Imported constitutional-review source.",
+      "readingRule": "Keep review metrics pathway-specific and proxy-aware; the updated denominator audit does not permit pooled validation claims."
+    },
+    {
+      "project": "Constitutional Review Simulator",
+      "title": "When Constitutional Review Improves Democratic Constitutionalism: A Comparative Simulation Framework",
+      "paper": {
+        "path": "/Users/jacobanderson/Documents/simulators/Constitutional Review Simulator/paper/main.tex",
+        "exists": true,
+        "modified": "2026-05-09T21:30:19",
+        "sha256": "dc9291f0876ef6558e5c1d71573c068b38925f4ad05d09973fecb2d5d1d4b187"
+      },
+      "pdf": {
+        "path": "/Users/jacobanderson/Documents/simulators/Constitutional Review Simulator/paper/main.pdf",
+        "exists": true,
+        "modified": "2026-05-09T21:37:19",
+        "sha256": "a7c68250757ee97212bf926bb1a270afac6465c850f1eec25168fb39c2415c2f"
+      },
+      "report": {
+        "path": "/Users/jacobanderson/Documents/simulators/Constitutional Review Simulator/reports/constitutional-review-sensitivity-v1.csv",
+        "exists": true,
+        "modified": "2026-05-09T21:34:47",
+        "sha256": "dc638127a5c146d542478af99dd2199f956f50d4f568900f97a6a1e5b8705398",
+        "rows": 231
+      },
+      "cumulativeUse": "Referenced review cross-check; not imported into rankings yet.",
+      "readingRule": "Use the richer compliance, defiance, implementation, emergency, and public-trust fields to guide schema reconciliation before any row merge."
+    },
+    {
+      "project": "Lobby Capture Simulator",
+      "title": "Strategic Channel Substitution and Regulatory Capture: A Simulation Model of Lobbying and Anti-Capture Reform",
+      "paper": {
+        "path": "/Users/jacobanderson/Documents/simulators/Lobby Capture Simulator/paper/main.tex",
+        "exists": true,
+        "modified": "2026-05-05T11:50:26",
+        "sha256": "72e62312fe3c733293d565dcfb898aa82cc46168b55e66873c906da908be9869"
+      },
+      "pdf": {
+        "path": "/Users/jacobanderson/Documents/simulators/Lobby Capture Simulator/paper/main.pdf",
+        "exists": true,
+        "modified": "2026-05-09T21:42:25",
+        "sha256": "d6accbfbd4b257096e044906b607b5dc67bd42fcf720fc255e0e12dfd7cc9482"
+      },
+      "report": {
+        "path": "/Users/jacobanderson/Documents/simulators/Lobby Capture Simulator/reports/lobby-capture-campaign.csv",
+        "exists": true,
+        "modified": "2026-05-09T21:41:31",
+        "sha256": "8e1e313e166cb8a6eda6d7048c90eac631b1d326f02a8ed12f0ca0fdac1a6b31",
+        "rows": 31
+      },
+      "cumulativeUse": "Imported anti-capture source.",
+      "readingRule": "Read low observed capture through total distortion, hidden influence, venue-shifting, and validation partial/miss diagnostics."
+    }
+  ]
+}

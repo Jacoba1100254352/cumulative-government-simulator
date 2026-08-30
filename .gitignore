@@ -1,0 +1,28 @@
+.DS_Store
+__pycache__/
+*.pyc
+paper/build/
+paper/.test-build/
+paper/.test-generated/
+paper/*.aux
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.synctex.gz
+paper/*.toc
+reports/.test-output/
+
+# Reproducible bulk row-level reports. Keep their Markdown summaries and the
+# smaller diagnostic CSVs in Git, then regenerate these with `make report` or
+# `make bridge` after cloning beside the sibling simulator repositories.
+reports/cumulative-government-portfolios.csv
+reports/profile-sensitivity.csv
+reports/portfolio-robustness.csv
+reports/portfolio-minimax-regret.csv
+reports/portfolio-uncertainty-tiers.csv
+reports/pareto-front-uncertainty.csv
+reports/adaptive-bridge-v1.csv
+reports/adaptive-bridge-v1-summary.csv
+reports/adaptive-bridge-v1-recommendation-gate.csv
+reports/adaptive-bridge-v1-timeseries.csv

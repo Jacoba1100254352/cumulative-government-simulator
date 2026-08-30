@@ -1,0 +1,92 @@
+{
+  "generatedAt": "2026-05-12T02:04:25+00:00",
+  "sources": [
+    {
+      "kind": "legislature",
+      "label": "Congress Institutional Simulator",
+      "path": "/Users/jacobanderson/Documents/simulators/Congress Institutional Simulator/reports/simulation-campaign-v21-paper.csv",
+      "rows": 1428,
+      "scenarioCount": 42,
+      "configuredMetricCount": 18,
+      "metricColumnsConfigured": [
+        "directionalScore",
+        "representativeQuality",
+        "riskControl",
+        "administrativeFeasibility",
+        "productivity",
+        "welfare",
+        "publicAlignment",
+        "democraticResponsiveness",
+        "legitimacy",
+        "antiLobbyingSuccess",
+        "activeLawWelfare",
+        "gridlock",
+        "lowSupport",
+        "weakPublicMandatePassage",
+        "concentratedHarmPassage",
+        "lobbyCapture",
+        "privateGainRatio",
+        "administrativeCost"
+      ]
+    },
+    {
+      "kind": "review",
+      "label": "Supreme Court Simulator Design",
+      "path": "/Users/jacobanderson/Documents/simulators/Supreme Court Simulator Design/reports/constitutional-review-campaign-v2.csv",
+      "rows": 520,
+      "scenarioCount": 26,
+      "configuredMetricCount": 18,
+      "metricColumnsConfigured": [
+        "directionalScore",
+        "stabilityRightsScore",
+        "legitimacyControlScore",
+        "legalStability",
+        "rightsProtection",
+        "democraticResponsiveness",
+        "independenceAccountabilityBalance",
+        "legitimacy",
+        "publicConfidence",
+        "lowerCourtCompliance",
+        "partisanAlignment",
+        "shadowDocketAbuse",
+        "emergencyLegitimacyRisk",
+        "constitutionalConflict",
+        "reversalRate",
+        "administrativeCost",
+        "totalInstitutionalCost",
+        "implementationComplexity"
+      ]
+    },
+    {
+      "kind": "anti_capture",
+      "label": "Lobby Capture Simulator",
+      "path": "/Users/jacobanderson/Documents/simulators/Lobby Capture Simulator/reports/lobby-capture-campaign.csv",
+      "rows": 31,
+      "scenarioCount": 31,
+      "configuredMetricCount": 21,
+      "metricColumnsConfigured": [
+        "directionalScore",
+        "captureControl",
+        "representation",
+        "reformFeasibility",
+        "antiCaptureSuccess",
+        "avgPublicInterest",
+        "darkMoneyTraceability",
+        "darkMoneyDirectVisibility",
+        "detectionRate",
+        "sanctionRate",
+        "netTransparencyGain",
+        "commentAuthenticity",
+        "commentUniqueInformationShare",
+        "captureRate",
+        "publicPreferenceDistortion",
+        "policyDistortion",
+        "hiddenInfluenceShare",
+        "influencePreservationRate",
+        "privateGainRatio",
+        "reformDecayPressure",
+        "administrativeCost"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "kind": "legislature",
+      "label": "Congress Institutional Simulator",
+      "path": "/Users/jacobanderson/Documents/simulators/Congress Institutional Simulator/reports/simulation-campaign-v21-paper.csv",
+      "rows": 1428,
+      "scenarioCount": 42,
+      "sha256": "1e36005c54d3a0ccf1b61904735a144dbd01e9afb600b17e7e6457a6124f0b35"
+    },
+    {
+      "kind": "review",
+      "label": "Supreme Court Simulator Design",
+      "path": "/Users/jacobanderson/Documents/simulators/Supreme Court Simulator Design/reports/constitutional-review-campaign-v2.csv",
+      "rows": 520,
+      "scenarioCount": 26,
+      "sha256": "2278a169405c38ecb2a80ca855d8d683d58f8ecbe00bf8ee124daeda8486dae3"
+    },
+    {
+      "kind": "anti_capture",
+      "label": "Lobby Capture Simulator",
+      "path": "/Users/jacobanderson/Documents/simulators/Lobby Capture Simulator/reports/lobby-capture-campaign.csv",
+      "rows": 31,
+      "scenarioCount": 31,
+      "sha256": "8e1e313e166cb8a6eda6d7048c90eac631b1d326f02a8ed12f0ca0fdac1a6b31"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+kind,rank,scenarioKey,scenarioName,score,rowCount,metricCoverage,configuredMetricCount,metricCoverageShare,source
+legislature,1,portfolio-hybrid-legislature,Portfolio hybrid legislature,0.683,34,18,18,1.000,Congress Institutional Simulator
+legislature,2,expanded-portfolio-hybrid-legislature,Expanded portfolio hybrid legislature,0.678,34,18,18,1.000,Congress Institutional Simulator
+legislature,3,simple-majority-alternatives-pairwise,Unicameral majority + pairwise alternatives,0.677,34,18,18,1.000,Congress Institutional Simulator
+legislature,4,pairwise-amendment-tournament-majority,Pairwise amendment tournament + majority,0.676,34,18,18,1.000,Congress Institutional Simulator
+legislature,5,anti-capture-majority-bundle,Majority + anti-capture bundle,0.643,34,18,18,1.000,Congress Institutional Simulator
+legislature,6,citizen-initiative-referendum,Citizen initiative and referendum,0.641,34,18,18,1.000,Congress Institutional Simulator
+legislature,7,citizens-agenda-petition-majority,Citizen agenda petitions + majority,0.633,34,18,18,1.000,Congress Institutional Simulator
+legislature,8,influence-system-majority,Campaign-finance influence system,0.633,34,18,18,1.000,Congress Institutional Simulator
+legislature,9,anti-capture-access-majority,Anti-capture proposal access + majority,0.632,34,18,18,1.000,Congress Institutional Simulator
+legislature,10,leadership-cartel-majority,Leadership agenda cartel + majority,0.624,34,18,18,1.000,Congress Institutional Simulator
+legislature,11,law-registry-majority,Active-law registry + majority review,0.623,34,18,18,1.000,Congress Institutional Simulator
+legislature,12,committee-discharge-target-majority,Committee discharge-petition target,0.623,34,18,18,1.000,Congress Institutional Simulator
+legislature,13,risk-routed-majority,Risk-routed majority legislature,0.622,34,18,18,1.000,Congress Institutional Simulator
+legislature,14,constitutional-court-architecture-majority,Constitutional court architecture,0.619,34,18,18,1.000,Congress Institutional Simulator
+legislature,15,citizen-assembly-threshold,Citizen assembly threshold gate,0.619,34,18,18,1.000,Congress Institutional Simulator
+legislature,16,parliamentary-coalition-confidence,Parliamentary coalition confidence,0.618,34,18,18,1.000,Congress Institutional Simulator
+legislature,17,random-public-review-panel-majority,Random public review panel + majority,0.618,34,18,18,1.000,Congress Institutional Simulator
+legislature,18,harm-weighted-majority,Harm-weighted double majority,0.616,34,18,18,1.000,Congress Institutional Simulator
+legislature,19,committee-regular-order,Committee-first regular order,0.614,34,18,18,1.000,Congress Institutional Simulator
+legislature,20,proposal-bond-majority,Proposal bonds + majority,0.614,34,18,18,1.000,Congress Institutional Simulator
+legislature,21,simple-majority,Unicameral simple majority,0.613,34,18,18,1.000,Congress Institutional Simulator
+legislature,22,public-interest-majority,Majority + public-interest screen,0.613,34,18,18,1.000,Congress Institutional Simulator
+legislature,23,public-objection-majority,Public objection window + majority,0.613,34,18,18,1.000,Congress Institutional Simulator
+legislature,24,default-pass,Default pass unless 2/3 block,0.611,34,18,18,1.000,Congress Institutional Simulator
+legislature,25,default-pass-multiround-mediation-challenge,Default pass + multi-round mediation + challenge,0.608,34,18,18,1.000,Congress Institutional Simulator
+legislature,26,cloture-conference-review,"Cloture, conference, and judicial review",0.608,34,18,18,1.000,Congress Institutional Simulator
+legislature,27,current-system,Stylized U.S.-like conventional benchmark,0.608,34,18,18,1.000,Congress Institutional Simulator
+legislature,28,proportional-committee-assignment-majority,Majority + proportional committee assignment,0.606,34,18,18,1.000,Congress Institutional Simulator
+legislature,29,open-rule-calendar-majority,Open-rule floor calendar + majority,0.605,34,18,18,1.000,Congress Institutional Simulator
+legislature,30,package-bargaining-majority,Package bargaining + majority,0.605,34,18,18,1.000,Congress Institutional Simulator
+legislature,31,bicameral-majority,Bicameral simple majority,0.605,34,18,18,1.000,Congress Institutional Simulator
+legislature,32,compensation-majority,Compensation amendments + majority,0.604,34,18,18,1.000,Congress Institutional Simulator
+legislature,33,long-horizon-learning-majority,Long-horizon strategic learning,0.604,34,18,18,1.000,Congress Institutional Simulator
+legislature,34,district-population-majority,District-population public-will model,0.602,34,18,18,1.000,Congress Institutional Simulator
+legislature,35,supermajority-60,Unicameral 60 percent passage,0.598,34,18,18,1.000,Congress Institutional Simulator
+legislature,36,agenda-lottery-majority,Weighted agenda lottery + majority,0.598,34,18,18,1.000,Congress Institutional Simulator
+legislature,37,omnibus-bargaining-majority,Omnibus bargaining + majority,0.598,34,18,18,1.000,Congress Institutional Simulator
+legislature,38,quadratic-attention-majority,Quadratic attention budget + majority,0.597,34,18,18,1.000,Congress Institutional Simulator
+legislature,39,multidimensional-package-majority,Multidimensional package bargaining + majority,0.595,34,18,18,1.000,Congress Institutional Simulator
+legislature,40,norm-erosion-majority,Endogenous norm erosion + majority,0.595,34,18,18,1.000,Congress Institutional Simulator
+legislature,41,default-pass-challenge,Default pass + challenge vouchers,0.594,34,18,18,1.000,Congress Institutional Simulator
+legislature,42,presidential-veto,Bicameral majority + presidential veto,0.594,34,18,18,1.000,Congress Institutional Simulator
+review,1,emergency-restraint-court,No emergency relief without merits review,0.683,20,16,18,0.889,Supreme Court Simulator Design
+review,2,emergency-integrity-package,Emergency integrity package,0.680,20,16,18,0.889,Supreme Court Simulator Design
+review,3,remand-override-window-package,Constitutional remand with override window,0.677,20,16,18,0.889,Supreme Court Simulator Design
+review,4,constitutional-remand,Constitutional remand before invalidation,0.677,20,16,18,0.889,Supreme Court Simulator Design
+review,5,automatic-merits-follow-up,Automatic merits follow-up for emergency relief,0.676,20,16,18,0.889,Supreme Court Simulator Design
+review,6,council-concrete-hybrid,Constitutional council with concrete-review backstop,0.675,20,16,18,0.889,Supreme Court Simulator Design
+review,7,constitutional-council,Pre-enactment constitutional council,0.673,20,16,18,0.889,Supreme Court Simulator Design
+review,8,comparative-constitutional-senates,Comparative 16-seat constitutional senates,0.670,20,16,18,0.889,Supreme Court Simulator Design
+review,9,panel-en-banc,Three-judge panels with en banc correction,0.670,20,16,18,0.889,Supreme Court Simulator Design
+review,10,randomized-merits-panels,Randomized merits panels with en banc correction,0.670,20,16,18,0.889,Supreme Court Simulator Design
+review,11,public-interest-litigation-filter,Public-interest litigation filter,0.669,20,16,18,0.889,Supreme Court Simulator Design
+review,12,jurisdiction-stripping-constraints,Jurisdiction stripping constrained by rights carveouts,0.669,20,16,18,0.889,Supreme Court Simulator Design
+review,13,panel-jurisdiction-safeguards,Random panels with jurisdiction safeguards,0.668,20,16,18,0.889,Supreme Court Simulator Design
+review,14,strong-recusal-enforcement,Independent recusal enforcement with substitutes,0.668,20,16,18,0.889,Supreme Court Simulator Design
+review,15,nonpartisan-commission,Nonpartisan commission appointments,0.667,20,16,18,0.889,Supreme Court Simulator Design
+review,16,legislative-override-window,Time-limited legislative override window,0.667,20,16,18,0.889,Supreme Court Simulator Design
+review,17,expanded-court-fifteen,Expanded 15-seat court,0.666,20,16,18,0.889,Supreme Court Simulator Design
+review,18,accountability-retention-court,Retention-election accountability court,0.666,20,16,18,0.889,Supreme Court Simulator Design
+review,19,term-limited-balanced,18-year staggered terms + regular appointments,0.666,20,16,18,0.889,Supreme Court Simulator Design
+review,20,mandatory-written-emergency-reasoning,Mandatory written emergency reasoning,0.666,20,16,18,0.889,Supreme Court Simulator Design
+review,21,legislative-override,Judicial review with legislative supermajority override,0.666,20,16,18,0.889,Supreme Court Simulator Design
+review,22,supermajority-review,60 percent invalidation threshold,0.666,20,16,18,0.889,Supreme Court Simulator Design
+review,23,recusal-and-emergency-reform,Peer recusal + reasoned emergency docket,0.665,20,16,18,0.889,Supreme Court Simulator Design
+review,24,cross-checking-courts,Supreme court with cross-checking constitutional court,0.664,20,16,18,0.889,Supreme Court Simulator Design
+review,25,dual-supreme-courts,Dual supreme courts with disagreement filter,0.655,20,16,18,0.889,Supreme Court Simulator Design
+review,26,current-us-like,Stylized current U.S.-like supreme court,0.623,20,16,18,0.889,Supreme Court Simulator Design
+anti_capture,1,full-anti-capture-bundle,Full anti-capture bundle,0.635,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,2,democracy-vouchers,Democracy vouchers,0.600,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,3,budgeted-disclosed-lobbying,Budgeted disclosed lobbying,0.599,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,4,bundle-with-evasion,Anti-capture bundle with evasion,0.592,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,5,randomized-audit-sanctions,Randomized audit and sanctions,0.584,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,6,venue-shifting-detection,Venue-shifting detection,0.584,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,7,reform-threat-mobilization,Reform threat mobilization,0.580,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,8,audit-and-sanctions,Audit and sanctions,0.573,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,9,outside-spending-disclosure-evasion,Outside-spending disclosure evasion,0.572,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,10,real-time-transparency,Real-time transparency,0.569,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,11,opaque-network-substitution-frontier,Opaque network substitution frontier,0.558,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,12,public-finance-dark-money-frontier,Public-finance dark-money frontier,0.548,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,13,procurement-firewalls,Procurement firewalls,0.545,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,14,public-interest-representation-funds,Public-interest representation funds,0.545,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,15,public-advocate-office,Public advocate office,0.538,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,16,hard-lobbying-budgets,Hard lobbying budgets,0.533,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,17,procurement-venue-shift-stress,Procurement venue-shift stress,0.532,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,18,shadow-lobbying-maximum-stress,Shadow lobbying maximum stress,0.528,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,19,procurement-modification-capture-frontier,Procurement modification capture frontier,0.525,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,20,comment-authenticity-rules,Comment-authenticity rules,0.518,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,21,hard-budget-substitution-stress,Hard-budget substitution stress,0.515,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,22,machine-readable-meeting-logs,Machine-readable meeting logs,0.509,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,23,intermediary-substitution,Think-tank and association intermediaries,0.496,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,24,open-access-lobbying,Open access lobbying,0.492,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,25,advisory-lobbying-substitution,Advisory lobbying substitution,0.487,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,26,enforced-cooling-off,Enforced cooling-off periods,0.467,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,27,cooling-off-ban,Cooling-off ban,0.446,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,28,revolving-door-dominant,Revolving-door dominant,0.433,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,29,dark-money-dominant,Dark money dominant,0.431,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,30,low-salience-technical-rulemaking,Low-salience technical rulemaking,0.431,1,21,21,1.000,Lobby Capture Simulator
+anti_capture,31,campaign-finance-dominant,Campaign finance dominant,0.429,1,21,21,1.000,Lobby Capture Simulator

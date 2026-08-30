@@ -1,0 +1,306 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage[hidelinks]{hyperref}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+\setlength{\textfloatsep}{10pt plus 2pt minus 2pt}
+\setlength{\intextsep}{8pt plus 2pt minus 2pt}
+\setlength{\abovecaptionskip}{4pt}
+\setlength{\belowcaptionskip}{2pt}
+\renewcommand{\topfraction}{0.92}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.78}
+\setcounter{topnumber}{4}
+\setcounter{bottomnumber}{3}
+\setcounter{totalnumber}{5}
+\providecommand{\GeneratedDir}{generated}
+\input{\GeneratedDir/report-macros.tex}
+
+\title{Institutional Portfolios for Efficient Democratic Government}
+\author{}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This working paper asks what can be learned by combining the legislative, constitutional-review, and lobbying/capture simulator projects into one portfolio screen. The current revision rechecks \SourcePaperCrosswalkCount{} updated sibling papers and report artifacts, then imports \LegislativeRowCount{} legislative campaign rows, \ReviewRowCount{} constitutional-review rows, and \AntiCaptureRowCount{} lobbying/capture rows, producing \PortfolioCount{} primary institutional portfolios. It does not treat every updated review artifact as interchangeable. Instead, it builds a review harmonization manifest, a companion review-source swap, and a conservative harmonized review source with \ReviewHarmonizedMetricCount{} shared static metrics. The harness then runs a focused \BridgePeriodCount-period interbranch bridge model over \BridgeCaseCount{} selected cases and a synthetic \AdaptiveBridgePeriodCount-period adaptive bridge over all \AdaptiveBridgePortfolioCount{} primary portfolios. The result is not a settled recommendation. Several candidate portfolios beat the stylized current-system baseline in the current synthetic screens, but no portfolio yet passes the adaptive recommendation gate. The balanced winner remains the leading static point-estimate and lower-bound candidate, while Adaptive Bridge v1 marks it \BalancedAdaptiveGate. The best use of the paper is therefore screening: narrow the design space, expose fragile winners, and specify the validation work needed before institutional recommendations are made.
+\end{abstract}
+
+\section{Research Question}
+
+The question is not which single institution looks strongest in isolation. The question is which combinations preserve public lawmaking capacity while preventing predictable institutional failure modes:
+
+\begin{itemize}
+  \item low-support or weak-mandate policy passage;
+  \item rights-threatening laws or emergency actions;
+  \item lobbying capture, dark influence, and reform evasion;
+  \item constitutional instability and interbranch conflict;
+  \item excessive administrative cost or procedural complexity.
+\end{itemize}
+
+The object of comparison is therefore the institutional portfolio: one legislative design, one review design, and one anti-capture design evaluated together.
+
+The contribution is narrower than a constitutional blueprint. The paper shows how separately calibrated simulators can be combined without pretending they form one statistical model. It uses the combined screen to sort candidate families, identify fragile headline winners, and state what evidence would be required before stronger claims are justified.
+
+\section{Argument Map}
+
+The body keeps only claims that change how a skeptical reader should interpret the results. Other diagnostic material is moved to the appendix.
+
+\begin{center}
+\small
+\begin{tabular}{@{}L{0.20\linewidth}L{0.36\linewidth}L{0.34\linewidth}@{}}
+\toprule
+Claim role & Evidence used in the body & Permitted conclusion \\
+\midrule
+Source scope & Imported rows, provenance, and sibling-paper crosswalk & The paper is a synthesis of three imported simulator families, with one updated constitutional-review companion used as a scope-control cross-check. \\
+Static screen & Balanced score, uncertainty overlap, and the focused candidate comparison & Some portfolios outperform the stylized current-system baseline, but rank one is not uncertainty-resolved. \\
+Feedback stress & Focused bridge v0 and stress exceptions & Candidate families must be judged by adaptation pressure, not only static efficiency. \\
+Recommendation boundary & Adaptive Bridge v1 gate counts and validation agenda & Current winners are validation targets, not settled institutional recommendations. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The paper separates three claim types. Empirical-source claims are limited to the imported report artifacts and their recorded provenance. Synthetic findings are claims produced by cumulative scoring, regret, Pareto, robustness, and bridge layers. Speculative design recommendations are proposals for future model extensions, calibration work, or reform sequences that are not yet tested as portfolio rows or bridge mechanisms.
+
+\section{Evidence Base}
+
+The cumulative project imports three existing simulator families and cross-references one updated companion review project. The Congress Institutional Simulator contributes lawmaking capacity, public alignment, welfare, gridlock, legitimacy, concentrated-harm passage, lobbying pressure, and administrative-feasibility diagnostics. The Supreme Court Simulator Design project contributes rights protection, review stability, democratic responsiveness, emergency abuse control, independence/accountability balance, legitimacy, public confidence, constitutional conflict, and cost diagnostics. The Lobby Capture Simulator contributes capture control, representation, public-interest alignment, detection, sanctioning, net transparency, hidden influence, reform decay, and administrative-cost diagnostics.
+
+The updated Constitutional Review Simulator now contributes a stronger comparative-review check on the paper's interpretation. It is not folded into the primary ranking as if it were just more rows from the same simulator, because it overlaps the imported review family while using different case structures, denominators, and additional compliance, implementation, defiance, emergency, and public-trust fields. A naive concatenation would overstate certainty. The current build therefore separates three objects: the primary imported Supreme Court Design source, a companion Constitutional Review source swap, and a conservative harmonized review source that includes only same-name, same-direction, defensibly comparable static review fields.
+
+\input{\GeneratedDir/source-summary-table.tex}
+\input{\GeneratedDir/source-paper-crosswalk-table.tex}
+\input{\GeneratedDir/review-source-reconciliation-table.tex}
+\input{\GeneratedDir/review-harmonization-manifest-table.tex}
+
+The reconciliation report finds \ReviewSharedConfiguredMetricCount{} shared configured review metrics, \ReviewImportedOnlyConfiguredMetricCount{} imported-only configured metrics, \ReviewCompanionOnlyConfiguredMetricCount{} companion-only configured metrics, and \ReviewAdaptiveCandidateCount{} companion fields that are better treated as adaptive inputs unless their denominators are harmonized. The manifest admits \ReviewHarmonizedMetricCount{} static metrics into the harmonized source and excludes source-specific composites, public-confidence/cost fields, and compliance fields from the harmonized static score. The integration problem is therefore not just missing data. It is construct ownership. These source simulators were calibrated separately, so the cumulative score cannot be read as a single unified statistical estimate. It is a structured comparison across separately generated artifacts. The source-paper crosswalk records which updated artifacts are imported, cross-checked, and harmonized. For that reason, the paper treats scores as screening evidence and then checks whether the same candidates survive uncertainty, value-profile, bridge, stress, adaptive, and review-source filters.
+
+\section{Cumulative Method}
+
+The cumulative harness groups each source report by scenario, computes component scores from available columns, and builds every legislature-review-anti-capture combination. It then compares portfolios on delivery, public alignment, rights safeguard, capture resistance, legitimacy, efficiency, complexity, and resilience floor. The resilience floor is deliberately conservative: a portfolio that performs well in two subsystems but collapses in capture resistance, rights protection, or complexity should not outrank a more balanced package without an explicit normative reason.
+
+The harness reports \ScoringProfileCount{} scoring profiles plus complementary Pareto, robustness, bridge, and bridge-sensitivity views. This matters because a single blended score can hide the strongest design lesson: different constitutional values reward different institutional packages, and some high-throughput packages look worse once rights, capture, legitimacy, and implementation constraints are treated as floors.
+
+\section{Which Designs Beat the Current-System Baseline?}
+
+The phrase ``beat the current system'' has a narrow meaning here. The current-system-ish row is a stylized benchmark assembled from the imported simulator families. It is not an empirical claim about the live U.S. constitutional order. A candidate beats that row only when it performs better in the current synthetic screens.
+
+\input{\GeneratedDir/candidate-synthesis-table.tex}
+
+The central result is that the stylized baseline is not competitive in the combined screen, while the leading alternatives separate into different roles. The balanced static winner is the best headline screen result. The robustness challenger is the stronger validation target once profile durability and stress regret matter. The adaptive gray-zone leader is the best all-portfolio adaptive screen result. None of those labels is a recommendation, because the adaptive gate produces \AdaptiveProvisionalShortlistCount{} provisional shortlist rows and \AdaptiveCalibrationGrayZoneCount{} calibration gray-zone rows.
+
+\section{Static Finding}
+
+The balanced-score winner is:
+
+\begin{quote}
+\BalancedWinnerName.
+\end{quote}
+
+\input{\GeneratedDir/balanced-result-table.tex}
+
+Its balanced score is \BalancedWinnerScore. The diagnostic pattern is strong delivery (\BalancedWinnerDelivery), strong rights safeguard (\BalancedWinnerRightsSafeguard), moderate capture resistance (\BalancedWinnerCaptureResistance), moderate legitimacy (\BalancedWinnerLegitimacy), moderate complexity score (\BalancedWinnerComplexity), and lower public alignment (\BalancedWinnerPublicAlignment). It is a plausible headline candidate under the point-estimate score because it does not rely on one institutional mechanism alone. It combines a high-capacity legislative portfolio, a review rule that sharply restrains emergency relief, and a lobbying environment that allows access under stronger anti-capture controls.
+
+The weakness is public alignment. The balanced winner should not be framed as a fully representative ideal. It is better described as a high-delivery, high-rights-screen portfolio with adequate capture control and manageable complexity. Its synthetic uncertainty interval is \BalancedWinnerUncertaintyLow--\BalancedWinnerUncertaintyHigh{} around the current score, with half-width \BalancedWinnerUncertaintyBand. Its lower-bound rank is \BalancedUncertaintyLowerBoundRank{}, but \BalancedUncertaintyOverlapCount{} portfolios overlap its interval. Its minimax-regret rank is \BalancedWinnerMinimaxRegretRank{} and its maximum profile regret is \BalancedWinnerMaxProfileRegret. Those diagnostics keep it in the lead under current scoring, but they prevent treating the rank-one row as uncertainty-resolved.
+
+The uncertainty bands below are not empirical confidence intervals. They are conservative model-sensitivity bands. They widen when a portfolio combines separately calibrated source artifacts, shows component imbalance, has cross-profile instability, or depends on thin metric coverage.
+
+\input{\GeneratedDir/uncertainty-resolution-table.tex}
+
+The interval-resolution diagnostic is severe: \BalancedUncertaintyOverlapCount{} generated portfolios overlap the balanced winner's interval. The lower-bound ordering still places \UncertaintyLowerBoundWinnerName{} first, but the project should describe that as a robustness clue, not as statistical separation from the field.
+
+The most robust cross-profile portfolio is:
+
+\begin{quote}
+\RobustWinnerName.
+\end{quote}
+
+It ranks only \RobustWinnerBalancedRank{} under the balanced score, but it has the best cross-profile durability: average profile rank \RobustWinnerAverageProfileRank, worst profile rank \RobustWinnerWorstProfileRank, and top-25 placement in \RobustWinnerTopTwentyFiveCount{} of the \ScoringProfileCount{} scoring profiles. Substantively, that points toward a design hypothesis: structured alternative selection may be more robust than a broad expanded hybrid when the evaluator cares about legitimacy, rights, and anti-capture goals as much as headline delivery. Adaptive Bridge v1 also ranks this robustness candidate much higher than the static balanced winner: adaptive rank \RobustAdaptiveRank{} versus \BalancedAdaptiveRank.
+
+The balanced winner itself remains provisional because it has weak public-alignment diagnostics and falls far under at least one value profile. The efficiency and minimax-regret leaders are more fragile: they reduce regret or increase throughput, but their default-passage structure makes them vulnerable to weak-floor, rights, legitimacy, or capture concerns. These rows are useful for learning what the scoring model rewards; they are not ready as constitutional recommendations.
+
+\section{Feedback and Stress Findings}
+
+The bridge model moves the project beyond static combination, but only for a focused candidate set. It selects \BridgeCaseCount{} cases from \PortfolioCount{} static portfolios: balanced winner, minimax-regret winner, robustness winner, rights/capture winner, legitimacy-first winner, efficiency caution case, and current-system-ish baseline. The remaining \BridgeUnmodeledPortfolioCount{} static portfolios are not bridge-simulated in this paper workflow.
+
+\input{\GeneratedDir/bridge-ranking-table.tex}
+\input{\GeneratedDir/figure-bridge-baseline.tex}
+
+Within that focused set, the baseline bridge winner is \BaselineBridgeWinnerName:
+
+\begin{quote}
+\BaselineBridgeWinnerPortfolio.
+\end{quote}
+
+This matters because the earlier robustness result could have suggested replacing the balanced winner with the pairwise-alternatives family. Focused bridge v0 does not support that as a clean replacement under baseline assumptions. Instead, it shows a tight top cluster. The balanced winner keeps more average delivery (\BalancedBridgeAverageDelivery) and the highest final policy quality in the baseline bridge run (\BalancedBridgeFinalPolicyQuality), while the minimax, legitimacy, robustness, and rights/capture cases remain close enough that the bridge should be read as a comparison-set filter rather than as a global portfolio ranking.
+
+The current-system-ish baseline performs worst in baseline bridge v0. It has low average delivery (\CurrentBaselineAverageDelivery), final policy quality of \CurrentBaselineFinalPolicyQuality, and the report flags weak starting floor, low policy quality, public-alignment erosion, and delivery bottleneck. This result should be treated as a stylized baseline comparison, not as an empirical claim about any real constitution.
+
+Bridge v0 reruns the same \BridgeCaseCount{} cases under \StressProfileCount{} configured stress profiles. By the configured wins/top-two rule, the balanced winner ranks first: it wins \BalancedStressWins{} of \StressProfileCount{} stress profiles, places top-two in \BalancedStressTopTwo, and has average stress rank \BalancedAverageStressRank. The stability conclusion still depends on the rule. \AverageScoreStressWinnerName{} has the best average bridge score and \MinimaxStressRegretWinnerName{} has the lowest maximum stress regret, so wins/top-two should not be described as the only defensible stability criterion.
+
+\input{\GeneratedDir/figure-stress-stability.tex}
+
+The major exceptions are high capture pressure and emergency abuse. Under high capture pressure, \HighCaptureWinnerName{} takes first:
+
+\begin{quote}
+\HighCaptureWinnerPortfolio.
+\end{quote}
+
+The balanced winner falls to rank \BalancedHighCaptureRank{} under high-capture stress and is flagged for low policy quality, public-alignment erosion, capture drift, and legitimacy erosion. That is the most important caveat in the current configuration. The balanced winner is strong when capture controls remain effective enough, but it can degrade sharply when organized interests adapt faster than the anti-capture layer can suppress.
+
+Under emergency-abuse stress, the \EmergencyAbuseWinnerName{} takes first and the balanced winner falls to rank \BalancedEmergencyAbuseRank. The failure mode is different from high capture: the balanced winner is not primarily losing because capture overwhelms it, but because emergency-driven rights pressure and correction backlog exceed the review/correction channel in the bridge assumptions. Under federalism and agency-capacity stress, the balanced winner remains first but carries a weak-starting-floor flag, so that stress should be treated as a modeling priority rather than a solved condition.
+
+\input{\GeneratedDir/high-capture-stress-table.tex}
+\input{\GeneratedDir/figure-high-capture-exception.tex}
+
+\section{Adaptive Survival Screen}
+
+Adaptive Bridge v1 is a broader but more speculative screen. It runs \AdaptiveBridgeRunCount{} portfolio-stress simulations: every one of the \AdaptiveBridgePortfolioCount{} static portfolios under the \StressProfileCount{} stress profiles, for \AdaptiveBridgePeriodCount{} periods each. It keeps the v0 stress labels, then adds synthetic transition load, sequencing readiness, party adaptation, court adaptation, lobby venue shifting, emergency safeguards, federalism resistance, delivery bottlenecks, recovery capacity, voter feedback, and citizen agenda capacity.
+
+This is not empirical validation. It is a skeptical institutional-survival screen. The Deep Research reports justify directional priors: narrow lobbying constraints invite venue shifting; emergency review matters only if it is fast, reason-giving, and anti-evasion oriented; high-complexity reforms need sequencing and administrative capacity; federalism and delivery bottlenecks are distinct failure modes; citizen agenda channels work best when deliberative and authenticated; and trust erosion is easier than trust recovery. The screen uses those priors to ask whether a portfolio still looks plausible after parties, courts, lobbyists, agencies, voters, and public agenda channels adapt.
+
+The current adaptive leader is:
+
+\begin{quote}
+\AdaptiveLeaderName.
+\end{quote}
+
+Its average adaptive score is \AdaptiveLeaderScore, worst stress rank is \AdaptiveLeaderWorstStressRank, maximum adaptive stress regret is \AdaptiveLeaderMaxStressRegret, and the gate labels it \AdaptiveLeaderGate. The current run has \AdaptiveProvisionalShortlistCount{} provisional shortlist rows, \AdaptiveCalibrationGrayZoneCount{} calibration gray-zone rows, \AdaptiveReviewPriorityCount{} review-priority rows, and \AdaptiveDoNotRecommendCount{} rows marked do not recommend yet.
+
+\input{\GeneratedDir/adaptive-bridge-v1-gate-table.tex}
+
+The important negative finding is that the static balanced winner does not survive this harsher adaptive screen. It falls to adaptive rank \BalancedAdaptiveRank, has average adaptive score \BalancedAdaptiveScore, worst stress rank \BalancedAdaptiveWorstStressRank, and maximum adaptive stress regret \BalancedAdaptiveMaxStressRegret. Its gate is \BalancedAdaptiveGate. That does not refute the static score; it means the static balanced winner depends on assumptions that become fragile when high capture, emergency abuse, low trust, noncompliance, and implementation overload are modeled as adaptive processes.
+
+The robustness candidate is stronger under v1 but still not a recommendation. It ranks \RobustAdaptiveRank{} with average adaptive score \RobustAdaptiveScore{} and worst stress rank \RobustAdaptiveWorstStressRank; its gate is \RobustAdaptiveGate. The v1 result therefore shifts the paper's comparative focus from one balanced point-estimate winner to a family comparison: pairwise-alternatives and pairwise-tournament legislatures with emergency restraint and full anti-capture, audit, or voucher supports, plus portfolio-hybrid challengers retained by the static robustness diagnostics. That comparison is a research agenda, not a settled recommendation, because pairwise, portfolio-hybrid, and budgeted-lobbying families still need direct family-specific validation.
+
+\section{Design Thesis}
+
+Within this stylized evidence base, the most promising configured direction is not a minimalist majoritarian system or a maximal-review system. The emerging design direction is a moderated institutional portfolio:
+
+\begin{itemize}
+  \item a legislature with meaningful agenda access, alternative comparison, public-interest filtering, harm-sensitive safeguards, and active-law correction;
+  \item a review system with enough independence to protect rights, strong emergency-restraint rules, and enough transparency to reduce legitimacy collapse;
+  \item anti-capture rules that combine disclosure, public participation, enforcement, and evasion-aware monitoring without making ordinary advocacy impossible.
+\end{itemize}
+
+\section{Validation Agenda}
+
+The current rows test institutional portfolios assembled from the imported simulators. Adaptive Bridge v1 now adds first-pass synthetic versions of transition load, implementation capacity, public feedback, citizen agenda channels, and adaptive political behavior. Those additions are useful, but they are still not deep enough to settle institutional recommendations. The next systems to model are speculative until they are implemented in source simulators, calibrated against evidence, and stress-tested as report artifacts.
+
+\input{\GeneratedDir/speculative-agenda-table.tex}
+
+A credible future version should explain why a candidate survives adaptation by parties, courts, lobbyists, agencies, and voters. Parties may alter agenda strategy. Courts may change docket behavior. Lobbyists may shift venues and messengers. Agencies may fail to implement complex reforms. Voters may punish or reward outputs in ways that change compliance and legitimacy. Adaptive Bridge v1 now exposes its mechanism-family coefficients in configuration and reports, but those coefficients are still evidence-anchored priors rather than fitted causal estimates.
+
+The highest-priority source refactor remains the review layer, but the first harmonization pass is now explicit. The updated Supreme Court Simulator Design paper warns against pooling pathway denominators, while the updated Constitutional Review Simulator exposes richer compliance and implementation outputs. The current harmonized source uses only shared static fields; future builds should either justify replacing source-specific metrics, move compliance and implementation variables into adaptive inputs, or keep the primary ranking source unchanged.
+
+The current build reruns three review variants: the primary Supreme Court Design source, the companion Constitutional Review source, and the harmonized review source. The companion run produces \DualReviewCompanionPortfolioCount{} portfolios; only \DualReviewTopTwentyFiveOverlap{} of its top 25 portfolios overlap the current imported-review top 25, and the current primary winner's rank in the companion run is \DualReviewPrimaryWinnerRankInCompanion. The harmonized run produces \HarmonizedReviewPortfolioCount{} portfolios; only \HarmonizedReviewTopTwentyFiveOverlap{} of its top 25 portfolios overlap the current imported-review top 25, its top-100 overlap with the current run is \CurrentHarmonizedTopHundredOverlap, and the current primary winner ranks \HarmonizedReviewPrimaryWinnerRank{} in that run. The harmonized winner is \HarmonizedReviewWinnerName. This is evidence that review-source choice materially affects the shortlist.
+
+\input{\GeneratedDir/dual-review-sensitivity-table.tex}
+\input{\GeneratedDir/review-variant-overlap-table.tex}
+\input{\GeneratedDir/review-variant-rank-shift-table.tex}
+
+The goal is not to eliminate politics. The goal is to make strategic behavior visible, channel it through contestable procedures, and prevent any one actor class from converting temporary advantage into durable institutional control.
+
+A stronger future version needs external calibration before it can move from screening to recommendation. The minimum validation program is:
+
+\begin{itemize}
+  \item historical data on proposal access, amendment selection, enactment, correction, and repeal under different legislative rules;
+  \item emergency docket timing, reason-giving, merits follow-up, rights-impact, and compliance data for review systems;
+  \item lobbying venue-shifting, enforcement, disclosure, sanctions, public-finance, and dark-money adaptation data;
+  \item federalism, agency-capacity, implementation-delay, and public-feedback data that can calibrate transition and overload parameters;
+  \item validation cases where parties, courts, lobbyists, agencies, and voters visibly adapted to a reform;
+  \item external coefficient ranges for the configured Adaptive Bridge v1 mechanism families rather than only directionally justified priors.
+\end{itemize}
+
+\section{Limitations}
+
+This paper does not claim that the current scores are empirically validated estimates of real-world constitutional performance. The sibling simulators are stylized comparative tools. The cumulative harness is a synthesis layer over their outputs.
+
+The updated sibling papers do not all enter the ranking in the same way. Congress and Lobby Capture updates change imported CSV inputs directly. Supreme Court Simulator Design remains the imported review source. The updated Constitutional Review Simulator is referenced but not ranked because treating two differently calibrated review projects as interchangeable would double-count review evidence and mask denominator differences.
+
+Bridge v0 is also stylized. Its feedback equations are transparent and auditable through \path{config/interbranch-bridge-v0.json}, but they are not calibrated causal estimates. It uses portfolio diagnostics as inputs rather than rerunning the sibling simulators period by period.
+
+Adaptive Bridge v1 is broader than v0 but not more empirically authoritative. Its equations and mechanism-family coefficients are transparent through \path{config/adaptive-bridge-v1.json} and its reports, but its party, court, lobby, agency, voter, transition, and citizen-agenda mechanisms remain evidence-anchored priors rather than fitted estimates. It should be used to demote fragile winners and identify research priorities, not to announce a settled constitutional design.
+
+The new uncertainty and regret diagnostics are guardrails, not solutions. The uncertainty bands are synthetic and should not be quoted as statistical confidence intervals. Because \BalancedUncertaintyOverlapCount{} portfolio intervals overlap the balanced winner's interval, point-estimate rank should be treated as a screening device rather than a settled ranking. The minimax-regret table depends on the currently configured value profiles; a different profile set could change the regret ordering. The watchlist identifies fragility inside the current model, but it cannot discover mechanisms the model has not implemented.
+
+The adjacent \texttt{../Civ Pro} project is not imported yet because it is currently a civil-procedure learning game rather than a government-performance campaign simulator. It should enter later only if it exports comparable access-to-justice, procedural fairness, litigation-cost, or rule-compliance metrics.
+
+\section{Working Conclusion}
+
+The strongest current conclusion is methodological and provisional. Methodologically, institutional portfolios should be ranked under multiple value profiles, checked for interval overlap, filtered by exact, epsilon, and uncertainty-aware Pareto rules, tested through feedback loops, rerun under explicit stress profiles, and then screened through adaptive-survival gates before design claims are made. Substantively, the current configured runs make single-rule fixes look weak. The balanced winner is the leading static point-estimate and lower-bound candidate, but it is not uncertainty-resolved and it fails the adaptive recommendation gate. The robustness and adaptive gray-zone leaders are better validation targets than final designs. No portfolio should be recommended as settled policy until the adaptive assumptions are calibrated against external evidence.
+
+\appendix
+\section{Technical Method Appendix}
+
+\subsection{Static Portfolio Scoring}
+
+The cumulative score is built from normalized subsystem diagnostics rather than from one raw simulator score. The importer first aggregates each source report by scenario key. It then computes component summaries from available columns only; missing source columns are skipped rather than imputed. The portfolio layer combines one legislature, one review design, and one anti-capture design into diagnostics for policy delivery, public alignment, rights safeguard, capture resistance, legitimacy, efficiency, complexity score, and resilience floor.
+
+The balanced score is intentionally not pure throughput. Delivery and efficiency matter, but the score also rewards rights safeguards, capture resistance, legitimacy, public alignment, and subsystem floor. The floor term is conservative: a portfolio that performs well in two subsystems but collapses on rights, capture resistance, or complexity should not become the headline candidate merely because its average is high.
+
+\input{\GeneratedDir/diagnostic-formulas-table.tex}
+
+\subsection{Profile Sensitivity}
+
+The alternate profiles expose normative dependence in the rankings. The efficiency-first profile rewards delivery, implementation efficiency, and low complexity. The rights-first profile rewards rights safeguards, legal stability, legitimacy, and resilience floor. The anti-capture-first profile emphasizes capture resistance, public alignment, legitimacy, and transparency. The low-complexity profile emphasizes administrative tractability. The legitimacy-first profile emphasizes legitimacy, democratic/public alignment, rights safeguards, and capture resistance. A portfolio that wins only one profile is treated as a value-specific candidate; a portfolio that remains competitive across profiles is treated as a stronger design candidate.
+
+\input{\GeneratedDir/profile-weights-table.tex}
+
+\input{\GeneratedDir/profile-winners-table.tex}
+\input{\GeneratedDir/profile-tradeoff-table.tex}
+\input{\GeneratedDir/uncertainty-summary-table.tex}
+\input{\GeneratedDir/minimax-regret-table.tex}
+
+\subsection{Robustness and Pareto Filtering}
+
+The robustness report is separate from the balanced report. Its score rewards low average profile rank, low worst profile rank, repeated top-profile appearances, limited score spread, and resilience floor. This is why the robustness winner can rank lower under the balanced score but remain central to the paper: it tests whether a design survives reasonable changes in value weighting.
+
+The Pareto filter identifies portfolios that are not clearly dominated across the major diagnostics. It does not claim that every Pareto-front portfolio is equally plausible. Its role is narrower: it prevents the paper from discarding designs that are weaker on the headline score but stronger on a constitutionally important dimension such as rights, legitimacy, capture resistance, or complexity.
+
+\input{\GeneratedDir/robustness-result-table.tex}
+\input{\GeneratedDir/fragile-watchlist-table.tex}
+\input{\GeneratedDir/pareto-summary-table.tex}
+
+\subsection{Bridge Coefficients and Stress Profiles}
+
+The bridge model is deterministic and configured through \path{config/interbranch-bridge-v0.json}. Its coefficients link legislative delivery, bad-policy inflow, review docket pressure, correction, court-curbing pressure, capture drift, public-alignment erosion, legitimacy, and compliance. The bridge does not rerun the sibling simulators period by period; it uses the portfolio diagnostics as initial conditions and feedback parameters.
+
+The stress profiles are scenario multipliers over that same bridge. High-capture pressure raises starting capture and capture growth. Low-public-trust weakens starting legitimacy and compliance. High-rights-threat stress increases review pressure and quality plus backlog penalties. Court-curbing and noncompliance stress increases retaliation and compliance decay. Administrative-complexity stress reduces effective delivery, review capacity, and compliance. These stresses are not empirical forecasts; they are structured sensitivity checks over the same focused comparison set.
+
+\input{\GeneratedDir/bridge-case-scope-table.tex}
+\input{\GeneratedDir/stress-stability-table.tex}
+\input{\GeneratedDir/stress-stability-definitions-table.tex}
+\input{\GeneratedDir/bridge-score-weights-table.tex}
+\input{\GeneratedDir/stress-modifiers-table.tex}
+
+\subsection{Adaptive Bridge v1}
+
+Adaptive Bridge v1 is configured through \path{config/adaptive-bridge-v1.json}. It reuses the v0 stress profiles but expands the state vector to include transition load, sequencing readiness, strategic adaptation by parties, courts, and lobbyists, federalism resistance, delivery bottlenecks, recovery capacity, agency implementation gaps, voter feedback pressure, feedback correction capacity, emergency safeguards, and citizen agenda capacity. Its recommendation gate requires a strong average adaptive score, limited worst-stress rank, limited adaptive regret, bounded synthetic uncertainty, bounded profile regret, an adequate resilience floor, and enough direct evidence not to treat a thin family-specific result as recommendable.
+
+The gate has four meanings. A provisional shortlist row passes the current synthetic screen but is still not an empirical recommendation. A calibration gray-zone row is strong enough to deserve direct validation but has unresolved evidence, stress, regret, or failure-mode caveats. A review-priority row is worth further modeling but fails more of the current gate conditions. A do-not-recommend-yet row should be treated as fragile under the present assumptions.
+
+\input{\GeneratedDir/adaptive-bridge-v1-mechanisms-table.tex}
+\input{\GeneratedDir/adaptive-bridge-v1-calibration-table.tex}
+\input{\GeneratedDir/adaptive-bridge-v1-coefficients-table.tex}
+\input{\GeneratedDir/adaptive-bridge-v1-leaders-table.tex}
+\input{\GeneratedDir/adaptive-bridge-v1-stress-winners-table.tex}
+
+\subsection{Input Provenance}
+
+The paper build records hashes for the imported sibling simulator artifacts. The table below gives abbreviated hashes for print readability; the full SHA-256 values are written beside the generated LaTeX fragments.
+
+\input{\GeneratedDir/source-provenance-table.tex}
+
+\end{document}

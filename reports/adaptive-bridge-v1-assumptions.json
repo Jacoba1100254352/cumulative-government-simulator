@@ -1,0 +1,709 @@
+{
+  "generatedAt": "2026-05-12T02:05:54+00:00",
+  "version": "adaptive-bridge-v1",
+  "periods": 36,
+  "boundary": "Synthetic all-portfolio adaptive survival screen. It is not a calibrated empirical estimate and should not be treated as proof that any institutional portfolio would work in practice.",
+  "v0StressConfigPath": "/Users/jacobanderson/Documents/simulators/Cumulative Government Simulator/config/interbranch-bridge-v0.json",
+  "v1AdaptiveConfigPath": "/Users/jacobanderson/Documents/simulators/Cumulative Government Simulator/config/adaptive-bridge-v1.json",
+  "modeledMechanisms": [
+    "transition load from reform complexity, low subsystem floor, uncertainty, and profile regret",
+    "sequencing readiness from front-loaded legality, staffing, transparency, and review capacity",
+    "party adaptation and agenda obstruction",
+    "court adaptation and court-curbing pressure",
+    "lobby adaptation and venue shifting across agencies, courts, procurement, ballot campaigns, think tanks, and associations",
+    "agency implementation gaps under federalism resistance, delivery bottlenecks, and recovery capacity",
+    "public feedback through asymmetric trust erosion, voter backlash, compliance, and legitimacy",
+    "citizen agenda capacity as a corrective channel, with overload and rights-risk penalties for weakly deliberative tools",
+    "emergency-powers safeguards against fast, evasive, or normalized executive action",
+    "family-level direct-evidence strength used as a recommendation gate caveat"
+  ],
+  "stateVariables": [
+    "policyQuality",
+    "publicAlignmentState",
+    "legitimacyState",
+    "capturePressure",
+    "reviewBacklog",
+    "courtCurbingPressure",
+    "partyAdaptationPressure",
+    "courtAdaptationPressure",
+    "lobbyAdaptationPressure",
+    "agencyImplementationGap",
+    "voterFeedbackPressure",
+    "citizenAgendaCapacity",
+    "sequencingReadiness",
+    "federalismResistance",
+    "deliveryBottleneck",
+    "recoveryCapacity",
+    "feedbackCorrectionCapacity",
+    "transitionLoad"
+  ],
+  "scoreWeights": {
+    "policyQuality": 0.17,
+    "legitimacy": 0.15,
+    "publicAlignment": 0.12,
+    "captureControl": 0.12,
+    "implementationControl": 0.1,
+    "courtCurbingControl": 0.08,
+    "reviewBacklogControl": 0.06,
+    "averageDelivery": 0.12,
+    "citizenAgendaCapacity": 0.04,
+    "adaptationControl": 0.04
+  },
+  "gateThresholds": {
+    "shortlistMinimumAverageScore": 0.61,
+    "shortlistMaximumWorstStressRank": 250,
+    "shortlistMaximumStressRegret": 0.055,
+    "shortlistMaximumUncertaintyBand": 0.105,
+    "shortlistMaximumProfileRegret": 0.09,
+    "shortlistMinimumResilienceFloor": 0.58,
+    "doNotRecommendMaximumFailureModes": 3,
+    "calibrationGrayZoneMinimumAverageScore": 0.62,
+    "calibrationGrayZoneMaximumStressRegret": 0.18,
+    "calibrationGrayZoneMaximumWorstStressPercentile": 0.35,
+    "calibrationGrayZoneMaximumFailureModes": 5,
+    "reviewPriorityMinimumAverageScore": 0.56,
+    "reviewPriorityMaximumWorstStressRank": 2000
+  },
+  "researchCalibration": {
+    "status": "evidence-informed priors; not empirically fitted",
+    "boundary": "The Deep Research reports justify directionally different priors for mechanism families, but they do not estimate a unified causal model for these portfolios.",
+    "sourceReports": [
+      "Constitutional Review - Sequencing Constitutional and Institutional Reform.md",
+      "Legislative Simulator - Public Feedback Loops in Democratic Politics.md",
+      "Institutional Design Simulator - Adaptive Bridge Calibration and Validation Strategy.md",
+      "Institutional Reform Simulator - Comparative Reform Bundles.md",
+      "Constitutional Review - Emergency Powers Courts and Crisis Governance.md",
+      "Legislative Simulator - Federalism Agency Capacity and Implementation Failure.md",
+      "Lobby Capture Simulator - Venue Shifting Under Constraint.md",
+      "Legislative Simulator - Citizen Agenda Setting Mechanisms.md"
+    ],
+    "priors": [
+      {
+        "area": "Lobby venue shifting",
+        "empiricalBasis": "Constraints on formal lobbying can shift influence to alternate venues and intermediaries; disclosure and sanctions help most when enforcement reaches those substitutes.",
+        "modelUse": "Anti-capture rows with audit, machine-readable logs, venue-shift detection, or sanctions reduce lobby adaptation and capture pressure; narrow caps and budget tools keep a substitution-risk caveat."
+      },
+      {
+        "area": "Emergency powers",
+        "empiricalBasis": "Emergency abuse risk rises with long duration, weak sunsets, low judicial access, court backlogs, information control, and executive appointment or jurisdiction pressure.",
+        "modelUse": "Emergency-integrity rows reduce rights-threat inflow, court adaptation, court-curbing pressure, and review backlog only when review is fast, reason-giving, and anti-evasion oriented."
+      },
+      {
+        "area": "Sequencing and transition costs",
+        "empiricalBasis": "Reform enactment and operational commencement should be separated; legality, staffing, data, transparency, and review capacity need to come before high-complexity redesigns.",
+        "modelUse": "Sequencing readiness reduces transition load, agency gaps, and delivery bottlenecks; complex one-shot redesigns carry higher transition and direct-evidence penalties."
+      },
+      {
+        "area": "Federalism and agency capacity",
+        "empiricalBasis": "Implementation failure depends on intergovernmental conflict, capability shortfalls, demand-to-capacity pressure, and recovery speed, not a single generic capacity term.",
+        "modelUse": "The bridge now tracks federalism resistance, delivery bottleneck pressure, and recovery capacity separately before combining them into agency implementation gaps."
+      },
+      {
+        "area": "Public feedback",
+        "empiricalBasis": "Dissatisfaction is corrective only when citizens have credible voice, efficacy, fair procedures, and trusted intermediaries; trust erosion is faster than trust recovery.",
+        "modelUse": "Feedback correction capacity can turn backlash into alignment and policy correction, while weak voice causes faster legitimacy erosion."
+      },
+      {
+        "area": "Citizen agenda setting",
+        "empiricalBasis": "Hybrid and deliberative mechanisms are safer than standalone plebiscitary mechanisms; open participation without authentication or response duties can overload institutions or amplify capture.",
+        "modelUse": "Citizen assemblies, random public review panels, and comment-authenticity rules improve agenda correction; initiatives and petition channels also add rights-risk or overload pressure."
+      },
+      {
+        "area": "Comparative evidence strength",
+        "empiricalBasis": "Emergency review, audit/sanction regimes, participatory budgeting-style channels, and democracy vouchers have more direct evidence than pairwise amendment tournaments, portfolio-hybrid legislatures, or budgeted disclosed lobbying.",
+        "modelUse": "Low-direct-evidence families can rank highly synthetically, but the recommendation gate labels them as calibration gray-zone or do-not-recommend rather than provisional recommendations."
+      }
+    ],
+    "validationRequirements": [
+      "Elicit score weights from an explicit loss function or stakeholder tradeoff exercise.",
+      "Backtest transition-load, agency-gap, voter-feedback, court-adaptation, and lobby-adaptation coefficients against historical reform episodes.",
+      "Use temporal holdouts and adversarial stress checks before treating any gate as decision-ready.",
+      "Require direct family-specific simulator work for pairwise, portfolio-hybrid, and budgeted-lobbying rows before recommending them."
+    ]
+  },
+  "portfolioAdjustmentFamilies": [
+    {
+      "family": "audit-and-sanctions anti-capture",
+      "evidenceTier": "evidence-anchored prior",
+      "sourceReports": [
+        "Lobby Capture Simulator - Venue Shifting Under Constraint.md",
+        "Institutional Reform Simulator - Comparative Reform Bundles.md"
+      ],
+      "tokens": [
+        "audit-and-sanctions",
+        "randomized-audit-sanctions",
+        "full anti-capture bundle"
+      ],
+      "add": {
+        "captureControlBonus": 0.06,
+        "transitionReadinessBonus": 0.025,
+        "recoveryCapacityBonus": 0.02
+      },
+      "multiply": {
+        "lobbyAdaptationMultiplier": 0.92
+      },
+      "calibrationUse": "Model broad audit, detection, and sanction regimes as reducing capture growth and venue-shifting pressure, with modest transition benefits from clearer enforcement architecture.",
+      "claimBoundary": "Not a fitted deterrence estimate; magnitude remains a prior."
+    },
+    {
+      "family": "venue-shifting detection",
+      "evidenceTier": "evidence-anchored prior",
+      "sourceReports": [
+        "Lobby Capture Simulator - Venue Shifting Under Constraint.md"
+      ],
+      "tokens": [
+        "venue-shifting-detection",
+        "machine-readable-meeting-logs"
+      ],
+      "add": {
+        "captureControlBonus": 0.05,
+        "transitionReadinessBonus": 0.035,
+        "feedbackCorrectionBonus": 0.02
+      },
+      "multiply": {
+        "lobbyAdaptationMultiplier": 0.88
+      },
+      "calibrationUse": "Give the largest lobby-adaptation reduction to mechanisms that explicitly track substitute venues and produce auditable records.",
+      "claimBoundary": "Evidence supports direction more strongly than magnitude."
+    },
+    {
+      "family": "democracy vouchers",
+      "evidenceTier": "evidence-informed prior",
+      "sourceReports": [
+        "Lobby Capture Simulator - Venue Shifting Under Constraint.md",
+        "Legislative Simulator - Citizen Agenda Setting Mechanisms.md"
+      ],
+      "tokens": [
+        "democracy-vouchers",
+        "democracy vouchers"
+      ],
+      "add": {
+        "agendaCapacityBonus": 0.04,
+        "captureControlBonus": 0.02,
+        "feedbackCorrectionBonus": 0.025
+      },
+      "multiply": {
+        "lobbyAdaptationMultiplier": 0.98
+      },
+      "calibrationUse": "Treat vouchers as public-input and campaign-finance pluralism aids, not as full substitutes for audit or venue-shift enforcement.",
+      "claimBoundary": "Not enough project-specific evidence to treat vouchers as a complete anti-capture control."
+    },
+    {
+      "family": "budgeted disclosed lobbying",
+      "evidenceTier": "low-direct-evidence prior",
+      "sourceReports": [
+        "Lobby Capture Simulator - Venue Shifting Under Constraint.md",
+        "Institutional Design Simulator - Adaptive Bridge Calibration and Validation Strategy.md"
+      ],
+      "tokens": [
+        "budgeted-disclosed-lobbying",
+        "budgeted disclosed lobbying",
+        "hard-lobbying-budgets"
+      ],
+      "add": {
+        "captureControlBonus": 0.025,
+        "capturePressureAdd": 0.012,
+        "transitionReadinessBonus": 0.01
+      },
+      "multiply": {
+        "lobbyAdaptationMultiplier": 0.98
+      },
+      "calibrationUse": "Preserve modest disclosure benefits while adding substitution pressure because hard limits can move influence to less visible channels.",
+      "claimBoundary": "Should remain a validation target, not a recommendation driver."
+    },
+    {
+      "family": "intermediary and dark-money substitution",
+      "evidenceTier": "evidence-anchored risk prior",
+      "sourceReports": [
+        "Lobby Capture Simulator - Venue Shifting Under Constraint.md"
+      ],
+      "tokens": [
+        "intermediary-substitution",
+        "dark-money",
+        "revolving-door",
+        "campaign-finance-dominant",
+        "low-salience"
+      ],
+      "add": {
+        "capturePressureAdd": 0.05,
+        "agendaOverloadAdd": 0.02
+      },
+      "multiply": {
+        "lobbyAdaptationMultiplier": 1.12
+      },
+      "calibrationUse": "Increase adaptation and pressure where influence can migrate through intermediaries, dark money, revolving-door channels, or low-salience venues.",
+      "claimBoundary": "Risk prior, not a measured venue-shift elasticity."
+    },
+    {
+      "family": "emergency integrity",
+      "evidenceTier": "evidence-anchored prior",
+      "sourceReports": [
+        "Constitutional Review - Emergency Powers Courts and Crisis Governance.md",
+        "Constitutional Review - Sequencing Constitutional and Institutional Reform.md"
+      ],
+      "tokens": [
+        "emergency-integrity-package",
+        "no emergency relief without merits review",
+        "automatic-merits-follow-up",
+        "mandatory-written-emergency-reasoning",
+        "emergency-restraint-court",
+        "recusal-and-emergency-reform"
+      ],
+      "add": {
+        "emergencySafeguardBonus": 0.1,
+        "reviewCapacityBonus": 0.05,
+        "courtCurbingReduction": 0.045,
+        "transitionReadinessBonus": 0.04,
+        "recoveryCapacityBonus": 0.03
+      },
+      "multiply": {},
+      "calibrationUse": "Give reason-giving, merits follow-up, recusal, and anti-evasion emergency reforms the largest review-side adaptive safeguard effects.",
+      "claimBoundary": "Direction is better supported than the exact effect size."
+    },
+    {
+      "family": "jurisdiction and pre-enactment review",
+      "evidenceTier": "evidence-informed prior",
+      "sourceReports": [
+        "Constitutional Review - Emergency Powers Courts and Crisis Governance.md",
+        "Constitutional Review - Sequencing Constitutional and Institutional Reform.md"
+      ],
+      "tokens": [
+        "jurisdiction-stripping-constraints",
+        "constitutional-council",
+        "pre-enactment"
+      ],
+      "add": {
+        "emergencySafeguardBonus": 0.04,
+        "reviewCapacityBonus": 0.03,
+        "courtCurbingReduction": 0.03,
+        "transitionReadinessBonus": 0.03
+      },
+      "multiply": {},
+      "calibrationUse": "Model front-loaded review and jurisdictional safeguards as reducing downstream emergency and curbing pressure, but below the emergency-integrity package.",
+      "claimBoundary": "Static review value and adaptive capacity remain partly confounded."
+    },
+    {
+      "family": "citizen assembly threshold",
+      "evidenceTier": "evidence-informed prior",
+      "sourceReports": [
+        "Legislative Simulator - Citizen Agenda Setting Mechanisms.md",
+        "Legislative Simulator - Public Feedback Loops in Democratic Politics.md"
+      ],
+      "tokens": [
+        "citizen-assembly-threshold",
+        "citizen assembly"
+      ],
+      "add": {
+        "agendaCapacityBonus": 0.07,
+        "agendaOverloadAdd": 0.025,
+        "feedbackCorrectionBonus": 0.055,
+        "transitionReadinessBonus": 0.02
+      },
+      "multiply": {
+        "partyAdaptationMultiplier": 0.96
+      },
+      "calibrationUse": "Treat deliberative agenda channels as strong public-feedback correctives with manageable but real overload costs.",
+      "claimBoundary": "Requires direct mechanism simulator rows before recommendation use."
+    },
+    {
+      "family": "random public review panel",
+      "evidenceTier": "evidence-informed prior",
+      "sourceReports": [
+        "Legislative Simulator - Citizen Agenda Setting Mechanisms.md",
+        "Legislative Simulator - Public Feedback Loops in Democratic Politics.md"
+      ],
+      "tokens": [
+        "random-public-review-panel",
+        "random public review panel"
+      ],
+      "add": {
+        "agendaCapacityBonus": 0.06,
+        "rightsRiskAdd": -0.025,
+        "feedbackCorrectionBonus": 0.05
+      },
+      "multiply": {
+        "partyAdaptationMultiplier": 0.97
+      },
+      "calibrationUse": "Model randomly selected review panels as deliberative correction channels with lower rights-risk than plebiscitary devices.",
+      "claimBoundary": "Institutional design details determine whether this prior holds."
+    },
+    {
+      "family": "citizens agenda petition",
+      "evidenceTier": "speculative-to-evidence-informed prior",
+      "sourceReports": [
+        "Legislative Simulator - Citizen Agenda Setting Mechanisms.md"
+      ],
+      "tokens": [
+        "citizens-agenda-petition",
+        "citizen agenda petition"
+      ],
+      "add": {
+        "agendaCapacityBonus": 0.06,
+        "agendaOverloadAdd": 0.035,
+        "feedbackCorrectionBonus": 0.035
+      },
+      "multiply": {
+        "partyAdaptationMultiplier": 0.97
+      },
+      "calibrationUse": "Give petitions meaningful agenda access benefits while retaining overload risk when filtering and response duties are weak.",
+      "claimBoundary": "Threshold design and authentication are not yet separately modeled."
+    },
+    {
+      "family": "citizen initiative referendum",
+      "evidenceTier": "risk-weighted prior",
+      "sourceReports": [
+        "Legislative Simulator - Citizen Agenda Setting Mechanisms.md",
+        "Legislative Simulator - Public Feedback Loops in Democratic Politics.md"
+      ],
+      "tokens": [
+        "citizen-initiative-referendum",
+        "citizen initiative and referendum"
+      ],
+      "add": {
+        "agendaCapacityBonus": 0.08,
+        "rightsRiskAdd": 0.045,
+        "agendaOverloadAdd": 0.05,
+        "capturePressureAdd": 0.02,
+        "feedbackCorrectionBonus": 0.025
+      },
+      "multiply": {},
+      "calibrationUse": "Model initiatives as high agenda-capacity but higher overload, capture, and rights-risk channels unless paired with deliberative safeguards.",
+      "claimBoundary": "Plebiscitary risks need source-simulator validation."
+    },
+    {
+      "family": "authenticated public participation",
+      "evidenceTier": "evidence-informed prior",
+      "sourceReports": [
+        "Legislative Simulator - Public Feedback Loops in Democratic Politics.md",
+        "Legislative Simulator - Citizen Agenda Setting Mechanisms.md"
+      ],
+      "tokens": [
+        "comment-authenticity-rules",
+        "public-interest-representation",
+        "public-advocate-office"
+      ],
+      "add": {
+        "agendaCapacityBonus": 0.035,
+        "captureControlBonus": 0.03,
+        "feedbackCorrectionBonus": 0.035,
+        "transitionReadinessBonus": 0.02
+      },
+      "multiply": {},
+      "calibrationUse": "Model authenticated comments and public-interest representation as lower-amplitude but broadly useful correction and anti-capture inputs.",
+      "claimBoundary": "Implementation quality matters more than the current coefficient can represent."
+    },
+    {
+      "family": "pairwise alternatives",
+      "evidenceTier": "low-direct-evidence prior",
+      "sourceReports": [
+        "Institutional Reform Simulator - Comparative Reform Bundles.md",
+        "Institutional Design Simulator - Adaptive Bridge Calibration and Validation Strategy.md"
+      ],
+      "tokens": [
+        "pairwise amendment",
+        "pairwise alternatives"
+      ],
+      "add": {
+        "transitionLoadAdd": 0.035,
+        "deliveryBottleneckAdd": 0.015,
+        "feedbackCorrectionBonus": 0.025
+      },
+      "multiply": {
+        "partyAdaptationMultiplier": 0.98
+      },
+      "calibrationUse": "Treat pairwise alternatives as plausible comparison-improving institutions with explicit transition and evidence penalties.",
+      "claimBoundary": "Needs family-specific source simulator before recommendation use."
+    },
+    {
+      "family": "portfolio hybrid",
+      "evidenceTier": "low-direct-evidence prior",
+      "sourceReports": [
+        "Institutional Reform Simulator - Comparative Reform Bundles.md",
+        "Constitutional Review - Sequencing Constitutional and Institutional Reform.md"
+      ],
+      "tokens": [
+        "portfolio hybrid"
+      ],
+      "add": {
+        "transitionLoadAdd": 0.045,
+        "deliveryBottleneckAdd": 0.02,
+        "transitionReadinessBonus": -0.02
+      },
+      "multiply": {},
+      "calibrationUse": "Penalize one-shot portfolio hybrids for transition and delivery bottlenecks unless sequencing is separately modeled.",
+      "claimBoundary": "Good synthetic performance should trigger validation, not recommendation."
+    },
+    {
+      "family": "default pass",
+      "evidenceTier": "risk-weighted prior",
+      "sourceReports": [
+        "Legislative Simulator - Public Feedback Loops in Democratic Politics.md",
+        "Institutional Reform Simulator - Comparative Reform Bundles.md"
+      ],
+      "tokens": [
+        "default-pass"
+      ],
+      "add": {
+        "rightsRiskAdd": 0.06,
+        "capturePressureAdd": 0.02,
+        "partyAdaptationMultiplier": 0.02
+      },
+      "multiply": {},
+      "calibrationUse": "Represent default-passage rules as increasing throughput but also weak-mandate, rights, and capture pressure.",
+      "claimBoundary": "Current coefficient only approximates the risk side of a more detailed legislative model."
+    }
+  ],
+  "stressProfiles": {
+    "baseline": {
+      "label": "Baseline",
+      "description": "Default bridge coefficients with no additional stress modifiers.",
+      "v0Modifiers": {},
+      "v1AdaptiveModifiers": {
+        "transitionLoadAdd": 0.0,
+        "partyAdaptationMultiplier": 1.0,
+        "courtAdaptationMultiplier": 1.0,
+        "lobbyAdaptationMultiplier": 1.0,
+        "agencyGapMultiplier": 1.0,
+        "voterFeedbackMultiplier": 1.0,
+        "citizenAgendaMultiplier": 1.0,
+        "emergencyAbuseMultiplier": 1.0,
+        "federalismResistanceAdd": 0.0,
+        "deliveryBottleneckAdd": 0.0,
+        "recoveryCapacityMultiplier": 1.0,
+        "publicFeedbackEfficacyMultiplier": 1.0,
+        "legitimacyErosionMultiplier": 1.0,
+        "trustRecoveryMultiplier": 1.0,
+        "lobbyVenueShiftMultiplier": 1.0,
+        "emergencySafeguardMultiplier": 1.0,
+        "agendaOverloadMultiplier": 1.0
+      }
+    },
+    "high-capture-pressure": {
+      "label": "High Capture Pressure",
+      "description": "Organized interests adapt more aggressively, capture pressure starts higher, and capture controls are less effective.",
+      "v0Modifiers": {
+        "initialCapturePressureAdd": 0.16,
+        "captureGrowthMultiplier": 1.35,
+        "captureControlMultiplier": 0.78,
+        "publicAlignmentCapturePenaltyMultiplier": 1.25,
+        "legitimacyCapturePenaltyMultiplier": 1.2,
+        "captureQualityPenaltyMultiplier": 1.25
+      },
+      "v1AdaptiveModifiers": {
+        "transitionLoadAdd": 0.02,
+        "partyAdaptationMultiplier": 1.08,
+        "courtAdaptationMultiplier": 1.02,
+        "lobbyAdaptationMultiplier": 1.36,
+        "agencyGapMultiplier": 1.08,
+        "voterFeedbackMultiplier": 1.12,
+        "citizenAgendaMultiplier": 0.92,
+        "emergencyAbuseMultiplier": 1.04,
+        "federalismResistanceAdd": 0.02,
+        "deliveryBottleneckAdd": 0.02,
+        "recoveryCapacityMultiplier": 0.96,
+        "publicFeedbackEfficacyMultiplier": 0.92,
+        "legitimacyErosionMultiplier": 1.12,
+        "trustRecoveryMultiplier": 0.92,
+        "lobbyVenueShiftMultiplier": 1.22,
+        "emergencySafeguardMultiplier": 0.96,
+        "agendaOverloadMultiplier": 1.06
+      }
+    },
+    "low-public-trust": {
+      "label": "Low Public Trust",
+      "description": "Legitimacy and compliance start lower, and public-alignment losses have stronger legitimacy effects.",
+      "v0Modifiers": {
+        "baseLegitimacyMultiplier": 0.82,
+        "initialComplianceAdd": -0.08,
+        "complianceMultiplier": 0.9,
+        "legitimacyUncorrectedPenaltyMultiplier": 1.25,
+        "legitimacyCapturePenaltyMultiplier": 1.15,
+        "deliveryMultiplier": 0.96
+      },
+      "v1AdaptiveModifiers": {
+        "transitionLoadAdd": 0.05,
+        "partyAdaptationMultiplier": 1.16,
+        "courtAdaptationMultiplier": 1.08,
+        "lobbyAdaptationMultiplier": 1.08,
+        "agencyGapMultiplier": 1.08,
+        "voterFeedbackMultiplier": 1.42,
+        "citizenAgendaMultiplier": 0.86,
+        "emergencyAbuseMultiplier": 1.06,
+        "federalismResistanceAdd": 0.03,
+        "deliveryBottleneckAdd": 0.03,
+        "recoveryCapacityMultiplier": 0.9,
+        "publicFeedbackEfficacyMultiplier": 0.78,
+        "legitimacyErosionMultiplier": 1.28,
+        "trustRecoveryMultiplier": 0.72,
+        "lobbyVenueShiftMultiplier": 1.08,
+        "emergencySafeguardMultiplier": 0.94,
+        "agendaOverloadMultiplier": 1.12
+      }
+    },
+    "high-rights-threat": {
+      "label": "High Rights-Threat Environment",
+      "description": "Bad-policy inflow is more likely to create rights-threatening review pressure.",
+      "v0Modifiers": {
+        "badPolicyMultiplier": 1.2,
+        "rightsThreatMultiplier": 1.45,
+        "docketPressureMultiplier": 1.2,
+        "badPolicyBacklogMultiplier": 1.2,
+        "badPolicyQualityPenaltyMultiplier": 1.25,
+        "netBenefitBadPolicyPenaltyMultiplier": 1.2
+      },
+      "v1AdaptiveModifiers": {
+        "transitionLoadAdd": 0.03,
+        "partyAdaptationMultiplier": 1.08,
+        "courtAdaptationMultiplier": 1.28,
+        "lobbyAdaptationMultiplier": 1.08,
+        "agencyGapMultiplier": 1.06,
+        "voterFeedbackMultiplier": 1.16,
+        "citizenAgendaMultiplier": 0.98,
+        "emergencyAbuseMultiplier": 1.18,
+        "federalismResistanceAdd": 0.02,
+        "deliveryBottleneckAdd": 0.03,
+        "recoveryCapacityMultiplier": 0.95,
+        "publicFeedbackEfficacyMultiplier": 0.94,
+        "legitimacyErosionMultiplier": 1.16,
+        "trustRecoveryMultiplier": 0.88,
+        "lobbyVenueShiftMultiplier": 1.08,
+        "emergencySafeguardMultiplier": 0.88,
+        "agendaOverloadMultiplier": 1.08
+      }
+    },
+    "court-curbing-noncompliance": {
+      "label": "Court-Curbing and Institutional Noncompliance Stress",
+      "description": "Corrective review creates more retaliation pressure, institutional compliance falls, and court-curbing pressure decays slowly.",
+      "v0Modifiers": {
+        "initialCourtCurbingPressureAdd": 0.1,
+        "courtCurbingGrowthMultiplier": 1.45,
+        "courtCurbingDecayMultiplier": 0.65,
+        "complianceMultiplier": 0.86,
+        "reviewCurbingPenaltyMultiplier": 1.3,
+        "legitimacyCurbingPenaltyMultiplier": 1.35,
+        "deliveryCourtCurbingPenaltyMultiplier": 1.25
+      },
+      "v1AdaptiveModifiers": {
+        "transitionLoadAdd": 0.04,
+        "partyAdaptationMultiplier": 1.24,
+        "courtAdaptationMultiplier": 1.34,
+        "lobbyAdaptationMultiplier": 1.1,
+        "agencyGapMultiplier": 1.12,
+        "voterFeedbackMultiplier": 1.18,
+        "citizenAgendaMultiplier": 0.92,
+        "emergencyAbuseMultiplier": 1.16,
+        "federalismResistanceAdd": 0.04,
+        "deliveryBottleneckAdd": 0.04,
+        "recoveryCapacityMultiplier": 0.88,
+        "publicFeedbackEfficacyMultiplier": 0.84,
+        "legitimacyErosionMultiplier": 1.22,
+        "trustRecoveryMultiplier": 0.8,
+        "lobbyVenueShiftMultiplier": 1.1,
+        "emergencySafeguardMultiplier": 0.86,
+        "agendaOverloadMultiplier": 1.1
+      }
+    },
+    "emergency-abuse-stress": {
+      "label": "Emergency Abuse Stress",
+      "description": "Emergency action and emergency litigation generate more rights-threatening policy, larger review dockets, and stronger legitimacy penalties when review cannot keep up.",
+      "v0Modifiers": {
+        "initialCorrectionBacklogAdd": 0.08,
+        "badPolicyMultiplier": 1.16,
+        "rightsThreatMultiplier": 1.38,
+        "docketPressureMultiplier": 1.28,
+        "reviewCapacityMultiplier": 0.92,
+        "badPolicyBacklogMultiplier": 1.18,
+        "uncorrectedBacklogMultiplier": 1.18,
+        "badPolicyQualityPenaltyMultiplier": 1.2,
+        "legitimacyUncorrectedPenaltyMultiplier": 1.32,
+        "netBenefitUncorrectedPenaltyMultiplier": 1.2
+      },
+      "v1AdaptiveModifiers": {
+        "transitionLoadAdd": 0.05,
+        "partyAdaptationMultiplier": 1.18,
+        "courtAdaptationMultiplier": 1.26,
+        "lobbyAdaptationMultiplier": 1.12,
+        "agencyGapMultiplier": 1.14,
+        "voterFeedbackMultiplier": 1.2,
+        "citizenAgendaMultiplier": 0.94,
+        "emergencyAbuseMultiplier": 1.46,
+        "federalismResistanceAdd": 0.03,
+        "deliveryBottleneckAdd": 0.05,
+        "recoveryCapacityMultiplier": 0.86,
+        "publicFeedbackEfficacyMultiplier": 0.84,
+        "legitimacyErosionMultiplier": 1.3,
+        "trustRecoveryMultiplier": 0.78,
+        "lobbyVenueShiftMultiplier": 1.12,
+        "emergencySafeguardMultiplier": 0.76,
+        "agendaOverloadMultiplier": 1.12
+      }
+    },
+    "administrative-complexity-stress": {
+      "label": "Administrative Overload and Complexity Stress",
+      "description": "Implementation is harder: effective complexity, delivery, review capacity, and compliance are reduced.",
+      "v0Modifiers": {
+        "baseComplexityMultiplier": 0.82,
+        "baseFloorMultiplier": 0.92,
+        "deliveryMultiplier": 0.92,
+        "reviewCapacityMultiplier": 0.88,
+        "complianceMultiplier": 0.92,
+        "captureGrowthMultiplier": 1.08,
+        "docketPressureMultiplier": 1.08
+      },
+      "v1AdaptiveModifiers": {
+        "transitionLoadAdd": 0.07,
+        "partyAdaptationMultiplier": 1.1,
+        "courtAdaptationMultiplier": 1.06,
+        "lobbyAdaptationMultiplier": 1.12,
+        "agencyGapMultiplier": 1.44,
+        "voterFeedbackMultiplier": 1.16,
+        "citizenAgendaMultiplier": 0.88,
+        "emergencyAbuseMultiplier": 1.08,
+        "federalismResistanceAdd": 0.05,
+        "deliveryBottleneckAdd": 0.11,
+        "recoveryCapacityMultiplier": 0.76,
+        "publicFeedbackEfficacyMultiplier": 0.84,
+        "legitimacyErosionMultiplier": 1.14,
+        "trustRecoveryMultiplier": 0.84,
+        "lobbyVenueShiftMultiplier": 1.14,
+        "emergencySafeguardMultiplier": 0.92,
+        "agendaOverloadMultiplier": 1.2
+      }
+    },
+    "federalism-agency-capacity-stress": {
+      "label": "Federalism and Agency-Capacity Stress",
+      "description": "Subnational resistance, agency undercapacity, procurement friction, and implementation bottlenecks weaken delivery, compliance, and correction capacity.",
+      "v0Modifiers": {
+        "baseComplexityMultiplier": 0.78,
+        "baseFloorMultiplier": 0.9,
+        "deliveryMultiplier": 0.88,
+        "reviewCapacityMultiplier": 0.9,
+        "complianceMultiplier": 0.84,
+        "captureGrowthMultiplier": 1.12,
+        "docketPressureMultiplier": 1.12,
+        "publicAlignmentUncorrectedPenaltyMultiplier": 1.18,
+        "legitimacyUncorrectedPenaltyMultiplier": 1.18,
+        "deliveryCourtCurbingPenaltyMultiplier": 1.15
+      },
+      "v1AdaptiveModifiers": {
+        "transitionLoadAdd": 0.09,
+        "partyAdaptationMultiplier": 1.26,
+        "courtAdaptationMultiplier": 1.12,
+        "lobbyAdaptationMultiplier": 1.16,
+        "agencyGapMultiplier": 1.52,
+        "voterFeedbackMultiplier": 1.22,
+        "citizenAgendaMultiplier": 0.84,
+        "emergencyAbuseMultiplier": 1.1,
+        "federalismResistanceAdd": 0.13,
+        "deliveryBottleneckAdd": 0.13,
+        "recoveryCapacityMultiplier": 0.7,
+        "publicFeedbackEfficacyMultiplier": 0.78,
+        "legitimacyErosionMultiplier": 1.18,
+        "trustRecoveryMultiplier": 0.8,
+        "lobbyVenueShiftMultiplier": 1.16,
+        "emergencySafeguardMultiplier": 0.9,
+        "agendaOverloadMultiplier": 1.22
+      }
+    }
+  }
+}

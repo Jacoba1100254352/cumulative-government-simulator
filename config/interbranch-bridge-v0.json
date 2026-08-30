@@ -1,0 +1,269 @@
+{
+  "version": "interbranch-bridge-v0",
+  "defaultPeriods": 24,
+  "boundary": "Deterministic bridge model over focused portfolio cases. It is not a causal empirical estimate.",
+  "stateVariables": [
+    "policyQuality",
+    "publicAlignmentState",
+    "capturePressure",
+    "correctionBacklog",
+    "courtCurbingPressure",
+    "legitimacyState",
+    "compliance"
+  ],
+  "feedbackLoops": [
+    "Legislative delivery creates useful policy and bad-policy/rights-threat inflow.",
+    "Rights-threat and correction backlog create review docket pressure.",
+    "Review capacity corrects part of the docket but can raise court-curbing pressure when legitimacy and public alignment are weak.",
+    "Capture pressure grows from throughput under weak capture controls and decays through anti-capture capacity plus corrective review.",
+    "Legitimacy responds to compliance and policy quality, but decays under capture, uncorrected pressure, and court-curbing pressure."
+  ],
+  "selectedCases": [
+    "balanced winner",
+    "cross-profile robustness winner",
+    "rights/capture winner",
+    "legitimacy-first winner",
+    "efficiency caution case",
+    "current-system-ish baseline"
+  ],
+  "thresholds": {
+    "weakStartingFloor": 0.56,
+    "lowPolicyQuality": 0.25,
+    "publicAlignmentErosion": 0.4,
+    "captureDrift": 0.55,
+    "uncorrectedRightsBacklog": 0.55,
+    "courtCurbingRisk": 0.45,
+    "legitimacyErosion": 0.45,
+    "deliveryBottleneck": 0.35
+  },
+  "coefficients": {
+    "initialState": {
+      "policyQualityWeights": {
+        "baseAlignment": 1.0,
+        "baseRights": 1.0,
+        "baseCaptureResistance": 1.0
+      },
+      "capturePressure": {
+        "inverseCaptureResistanceWeight": 1.0
+      },
+      "correctionBacklog": {
+        "rightsGapWeight": 0.35,
+        "alignmentGapWeight": 0.15
+      },
+      "compliance": {
+        "legitimacyWeight": 0.45,
+        "rightsWeight": 0.3,
+        "complexityWeight": 0.25
+      }
+    },
+    "delivery": {
+      "legitimacyBase": 0.65,
+      "legitimacyWeight": 0.35,
+      "complexityBase": 0.82,
+      "complexityWeight": 0.18,
+      "capturePenalty": 0.05,
+      "courtCurbingPenalty": 0.04
+    },
+    "usefulPolicy": {
+      "publicAlignmentStateWeight": 0.45,
+      "baseAlignmentWeight": 0.25,
+      "captureControlWeight": 0.2,
+      "legitimacyWeight": 0.1
+    },
+    "badPolicy": {
+      "publicAlignmentGapWeight": 0.42,
+      "capturePressureWeight": 0.3,
+      "rightsGapWeight": 0.28
+    },
+    "rightsThreat": {
+      "base": 0.6,
+      "rightsGapWeight": 0.4,
+      "courtCurbingWeight": 0.05
+    },
+    "reviewDocket": {
+      "correctionBacklogWeight": 0.35,
+      "capturePressureWeight": 0.15
+    },
+    "reviewCapacity": {
+      "complexityBase": 0.55,
+      "complexityWeight": 0.45,
+      "legitimacyBase": 0.75,
+      "legitimacyWeight": 0.25,
+      "courtCurbingPenalty": 0.08
+    },
+    "correction": {
+      "correctedShare": 0.45
+    },
+    "capture": {
+      "growth": {
+        "deliveryCaptureGapWeight": 0.18,
+        "publicAlignmentGapWeight": 0.04,
+        "complexityGapWeight": 0.03
+      },
+      "control": {
+        "base": 0.1,
+        "legitimacyWeight": 0.1,
+        "correctedWeight": 0.04
+      }
+    },
+    "backlog": {
+      "retention": 0.72,
+      "uncorrectedWeight": 0.55,
+      "badPolicyWeight": 0.2,
+      "correctedWeight": 0.2
+    },
+    "courtCurbing": {
+      "legitimacyAlignmentTolerance": 0.45,
+      "correctedExcessWeight": 0.16,
+      "uncorrectedWeight": 0.04,
+      "decay": {
+        "rightsComplexityWeight": 0.05,
+        "legitimacyWeight": 0.03
+      }
+    },
+    "compliance": {
+      "legitimacyWeight": 0.45,
+      "rightsWeight": 0.25,
+      "complexityWeight": 0.2,
+      "courtCurbingControlWeight": 0.1
+    },
+    "policyQuality": {
+      "retention": 0.82,
+      "usefulPolicyWeight": 0.18,
+      "correctedWeight": 0.08,
+      "badPolicyPenalty": 0.1,
+      "capturePenalty": 0.04
+    },
+    "publicAlignment": {
+      "retention": 0.86,
+      "baseAlignmentWeight": 0.08,
+      "captureResistanceWeight": 0.04,
+      "correctedWeight": 0.03,
+      "capturePenalty": 0.07,
+      "uncorrectedPenalty": 0.04
+    },
+    "legitimacy": {
+      "retention": 0.86,
+      "baseLegitimacyWeight": 0.08,
+      "complianceWeight": 0.05,
+      "policyQualityWeight": 0.04,
+      "courtCurbingPenalty": 0.06,
+      "uncorrectedPenalty": 0.05,
+      "capturePenalty": 0.04
+    },
+    "netBenefit": {
+      "badPolicyPenalty": 0.45,
+      "uncorrectedPenalty": 0.25
+    },
+    "bridgeScore": {
+      "policyQuality": 0.22,
+      "legitimacy": 0.18,
+      "captureControl": 0.17,
+      "backlogControl": 0.14,
+      "compliance": 0.12,
+      "averageDelivery": 0.1,
+      "courtCurbingControl": 0.07
+    }
+  },
+  "stressProfiles": {
+    "baseline": {
+      "label": "Baseline",
+      "description": "Default bridge coefficients with no additional stress modifiers.",
+      "modifiers": {}
+    },
+    "high-capture-pressure": {
+      "label": "High Capture Pressure",
+      "description": "Organized interests adapt more aggressively, capture pressure starts higher, and capture controls are less effective.",
+      "modifiers": {
+        "initialCapturePressureAdd": 0.16,
+        "captureGrowthMultiplier": 1.35,
+        "captureControlMultiplier": 0.78,
+        "publicAlignmentCapturePenaltyMultiplier": 1.25,
+        "legitimacyCapturePenaltyMultiplier": 1.2,
+        "captureQualityPenaltyMultiplier": 1.25
+      }
+    },
+    "low-public-trust": {
+      "label": "Low Public Trust",
+      "description": "Legitimacy and compliance start lower, and public-alignment losses have stronger legitimacy effects.",
+      "modifiers": {
+        "baseLegitimacyMultiplier": 0.82,
+        "initialComplianceAdd": -0.08,
+        "complianceMultiplier": 0.9,
+        "legitimacyUncorrectedPenaltyMultiplier": 1.25,
+        "legitimacyCapturePenaltyMultiplier": 1.15,
+        "deliveryMultiplier": 0.96
+      }
+    },
+    "high-rights-threat": {
+      "label": "High Rights-Threat Environment",
+      "description": "Bad-policy inflow is more likely to create rights-threatening review pressure.",
+      "modifiers": {
+        "badPolicyMultiplier": 1.2,
+        "rightsThreatMultiplier": 1.45,
+        "docketPressureMultiplier": 1.2,
+        "badPolicyBacklogMultiplier": 1.2,
+        "badPolicyQualityPenaltyMultiplier": 1.25,
+        "netBenefitBadPolicyPenaltyMultiplier": 1.2
+      }
+    },
+    "court-curbing-noncompliance": {
+      "label": "Court-Curbing and Institutional Noncompliance Stress",
+      "description": "Corrective review creates more retaliation pressure, institutional compliance falls, and court-curbing pressure decays slowly.",
+      "modifiers": {
+        "initialCourtCurbingPressureAdd": 0.1,
+        "courtCurbingGrowthMultiplier": 1.45,
+        "courtCurbingDecayMultiplier": 0.65,
+        "complianceMultiplier": 0.86,
+        "reviewCurbingPenaltyMultiplier": 1.3,
+        "legitimacyCurbingPenaltyMultiplier": 1.35,
+        "deliveryCourtCurbingPenaltyMultiplier": 1.25
+      }
+    },
+    "emergency-abuse-stress": {
+      "label": "Emergency Abuse Stress",
+      "description": "Emergency action and emergency litigation generate more rights-threatening policy, larger review dockets, and stronger legitimacy penalties when review cannot keep up.",
+      "modifiers": {
+        "initialCorrectionBacklogAdd": 0.08,
+        "badPolicyMultiplier": 1.16,
+        "rightsThreatMultiplier": 1.38,
+        "docketPressureMultiplier": 1.28,
+        "reviewCapacityMultiplier": 0.92,
+        "badPolicyBacklogMultiplier": 1.18,
+        "uncorrectedBacklogMultiplier": 1.18,
+        "badPolicyQualityPenaltyMultiplier": 1.2,
+        "legitimacyUncorrectedPenaltyMultiplier": 1.32,
+        "netBenefitUncorrectedPenaltyMultiplier": 1.2
+      }
+    },
+    "administrative-complexity-stress": {
+      "label": "Administrative Overload and Complexity Stress",
+      "description": "Implementation is harder: effective complexity, delivery, review capacity, and compliance are reduced.",
+      "modifiers": {
+        "baseComplexityMultiplier": 0.82,
+        "baseFloorMultiplier": 0.92,
+        "deliveryMultiplier": 0.92,
+        "reviewCapacityMultiplier": 0.88,
+        "complianceMultiplier": 0.92,
+        "captureGrowthMultiplier": 1.08,
+        "docketPressureMultiplier": 1.08
+      }
+    },
+    "federalism-agency-capacity-stress": {
+      "label": "Federalism and Agency-Capacity Stress",
+      "description": "Subnational resistance, agency undercapacity, procurement friction, and implementation bottlenecks weaken delivery, compliance, and correction capacity.",
+      "modifiers": {
+        "baseComplexityMultiplier": 0.78,
+        "baseFloorMultiplier": 0.9,
+        "deliveryMultiplier": 0.88,
+        "reviewCapacityMultiplier": 0.9,
+        "complianceMultiplier": 0.84,
+        "captureGrowthMultiplier": 1.12,
+        "docketPressureMultiplier": 1.12,
+        "publicAlignmentUncorrectedPenaltyMultiplier": 1.18,
+        "legitimacyUncorrectedPenaltyMultiplier": 1.18,
+        "deliveryCourtCurbingPenaltyMultiplier": 1.15
+      }
+    }
+  }
+}
